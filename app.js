@@ -113,8 +113,91 @@ function toggleFav(btn) {
   btn.innerHTML = btn.classList.contains('active') ? '♥' : '♡';
 }
 
-// تشغيل عند تحميل الصفحة
+// دالة عرض السلة
+function renderCart() {
+  let root = document.getElementById("cartContents");
+  if (!root) return;
+  
+  let c = getCart();
+  
+  if (!c.length) {
+    root.innerHTML = '<div style="text-align: center; padding: 40px 20px; color: var(--text-muted);"><h2>سلتك فارغة حالياً</h2><p style="margin-top:10px;">تصفح المنتجات وأضف ما يعجبك.</p><a href="products.html" class="add-to-cart-btn" style="display:inline-block; width:auto; padding:10px 30px; margin-top:20px;">تصفح المنتجات</a></div>';
+    return;
+  }
+
+  let subtotal = 0;
+  
+  let itemsHTML = c.map(i => {
+    let p = PRODUCTS.find(p => p.id === i.id);
+    if (!p) return "";
+    subtotal += (p.price * i.qty);
+    
+    return `
+    <div class="cart-item">
+      <button class="delete-btn" onclick="removeItem(${p.id})">🗑️</button>
+      <img src="${p.image}" alt="${p.name}" class="cart-item-img">
+      <div class="cart-item-details">
+        <div class="cart-item-title">${p.name}</div>
+        <div class="cart-item-price">${fmt(p.price)}</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(${p.id}, 1)">+</button>
+          <span>${i.qty}</span>
+          <button onclick="changeQty(${p.id}, -1)">-</button>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+
+  let shipping = subtotal > 0 ? 26 : 0; // رسوم توصيل ثابتة
+  let total = subtotal + shipping;
+
+  root.innerHTML = `
+    ${itemsHTML}
+    
+    <div class="cart-summary">
+      <div class="summary-row">
+        <span>إجمالي المنتجات</span>
+        <span>${fmt(subtotal)}</span>
+      </div>
+      <div class="summary-row">
+        <span>رسوم التوصيل</span>
+        <span>${fmt(shipping)}</span>
+      </div>
+      <div class="summary-row total">
+        <span>المجموع الكلي</span>
+        <span>${fmt(total)}</span>
+      </div>
+      
+      <button class="checkout-btn" onclick="location.href='checkout.html'">
+        إتمام الطلب <span>❯</span>
+      </button>
+    </div>
+  `;
+}
+
+// دوال تعديل الكمية والحذف
+function changeQty(id, d) {
+  let c = getCart();
+  let i = c.find(x => x.id === id);
+  if (i) {
+    i.qty += d;
+    if (i.qty <= 0) {
+      c = c.filter(x => x.id !== id);
+    }
+  }
+  setCart(c);
+  renderCart();
+}
+
+function removeItem(id) {
+  setCart(getCart().filter(x => x.id !== id));
+  renderCart();
+  toast("تم حذف المنتج");
+}
+
+// تحديث السلة عند تحميل الصفحة
 document.addEventListener("DOMContentLoaded", () => {
   updateCount();
   renderProducts();
+  renderCart(); // <--- هذه الدالة ستعرض السلة
 });
