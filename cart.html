@@ -1,1 +1,43 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brandland | سلة المشتريات</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head><body><div class="announcement">تجربة راقية تبدأ من هنا · تغليف محايد وخصوصية تامة</div><header class="top"><button class="menu-button" onclick="toggleMenu()">☰</button><a class="logo" href="index.html"><span class="crown">♛</span> BRANDLAND<small>متجر الألعاب الزوجية</small></a><nav id="mainNav"><a href="index.html">الرئيسية</a><a href="categories.html">الأقسام</a><a href="products.html">المنتجات</a><a class="active" href="cart.html">السلة</a><a href="menu.html">تواصل معنا</a></nav><div class="icons"><a href="account.html">♙</a><a href="cart.html">🛒<sup class="cart-count" data-cart-count>0</sup></a></div></header><main class="page narrow"><div class="page-title"><p class="eyebrow">YOUR SELECTION</p><h1>سلة المشتريات</h1><p>راجع اختياراتك قبل إتمام الطلب.</p></div><div id="cartContents"></div></main><footer><a class="logo" href="index.html">♛ BRANDLAND<small>متجر الألعاب الزوجية</small></a><small>© 2026 Brandland · نموذج واجهات تجريبي</small></footer></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brandland | سلة المشتريات</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <button class="menu-button" aria-label="القائمة" onclick="toggleMenu()">☰</button>
+  <a class="logo" href="index.html">
+    <span class="crown">♛</span> 
+    <div class="logo-text">BRANDLAND</div>
+  </a>
+  <div class="icons">
+    <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
+  </div>
+</header>
+
+<main class="page">
+  <!-- عنوان الصفحة -->
+  <div class="section-header" style="margin-top: 20px;">
+    <h2 style="font-size: 24px;">سلة المشتريات 🛍️</h2>
+  </div>
+
+  <!-- سيتم عرض محتويات السلة هنا عبر JavaScript -->
+  <div id="cartContents" style="padding-bottom: 100px;"></div>
+
+</main>
+
+<!-- القائمة السفلية للجوال -->
+<nav class="bottom-nav">
+  <a href="index.html"><span>🏠</span>الرئيسية</a>
+  <a href="categories.html"><span>▦</span>الأقسام</a>
+  <a href="cart.html" class="active"><span>🛒</span>السلة</a>
+  <a href="account.html"><span>♙</span>حسابي</a>
+</nav>
+
+</body>
+</html>
