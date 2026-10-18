@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brandland | الرئيسية</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<div class="announcement">تجربة راقية تبدأ من هنا · تغليف محايد وخصوصية تامة</div>
+
+<header class="top">
+  <button class="menu-button" aria-label="القائمة" onclick="toggleMenu()">☰</button>
+  <a class="logo" href="index.html">
+    <span class="crown">♛</span> 
+    <div class="logo-text">BRANDLAND<small>متجر الألعاب الزوجية</small></div>
+  </a>
+  <nav id="mainNav">
+    <a class="active" href="index.html">الرئيسية</a>
+    <a href="categories.html">الأقسام</a>
+    <a href="products.html">جميع المنتجات</a>
+    <a href="menu.html">تواصل معنا</a>
+  </nav>
+  <div class="icons">
+    <a href="account.html" title="حسابي">♙</a>
+    <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
+  </div>
+</header>
+
+<main>
+  <!-- البانر الرئيسي (تم ربطه بصورة product-1) -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1>اكتشف عالم المتعة</h1>
+      <p>منتجات مختارة بعناية لتعزيز علاقتك</p>
+      <a class="btn primary-btn" href="products.html">تسوق الآن <span>&lt;</span></a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/product-1.jpg" alt="Brandland Banner">
+    </div>
+  </section>
+
+  <!-- مميزات المتجر -->
+  <section class="features-bar">
+    <div class="feature-item">
+      <span class="feature-icon">🔒</span>
+      <b>خصوصية تامة</b>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">💳</span>
+      <b>دفع عند الاستلام</b>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">🚚</span>
+      <b>توصيل سريع</b>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">🛡️</span>
+      <b>جودة عالية</b>
+    </div>
+  </section>
+
+  <!-- قسم المنتجات -->
+  <section class="products-section">
+    <div class="section-header">
+      <h2>جميع المنتجات</h2>
+    </div>
+    
+    <!-- شريط البحث -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="ابحث عن منتج..." onkeyup="filterProducts()">
+      <span class="search-icon">🔍</span>
+    </div>
+
+    <!-- أزرار التصفية -->
+    <div class="filter-tabs">
+      <button class="active" onclick="filterByTab('all', this)">الكل</button>
+      <button onclick="filterByTab('popular', this)">الأكثر مبيعاً</button>
+      <button onclick="filterByTab('new', this)">الأحدث</button>
+      <button onclick="filterByTab('rating', this)">الأعلى تقييماً</button>
+    </div>
+
+    <!-- شبكة المنتجات -->
+    <div class="products-grid" id="allProducts">
+      <!-- سيتم تعبئة المنتجات هنا عبر JavaScript -->
+    </div>
+  </section>
+</main>
+
+<!-- القائمة السفلية للجوال -->
+<nav class="bottom-nav">
+  <a href="index.html" class="active"><span>🏠</span>الرئيسية</a>
+  <a href="categories.html"><span>▦</span>الأقسام</a>
+  <a href="cart.html"><span>🛒</span>السلة</a>
+  <a href="account.html"><span>♙</span>حسابي</a>
+</nav>
+
+<footer>
+  <a class="logo" href="index.html"><span class="crown">♛</span> BRANDLAND<small>متجر الألعاب الزوجية</small></a>
+  <p>أكثر من مجرد متجر… تجربة تهتم بالتفاصيل.</p>
+  <small>© 2026 Brandland · جميع الحقوق محفوظة</small>
+</footer>
+</body>
+</html>26 Brandland · جميع الحقوق محفوظة</small>
+</footer>
+</body>
+</html>
