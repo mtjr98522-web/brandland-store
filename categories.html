@@ -1,1 +1,99 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brandland | الأقسام</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head><body><div class="announcement">تجربة راقية تبدأ من هنا · تغليف محايد وخصوصية تامة</div><header class="top"><button class="menu-button" onclick="toggleMenu()">☰</button><a class="logo" href="index.html"><span class="crown">♛</span> BRANDLAND<small>متجر الألعاب الزوجية</small></a><nav id="mainNav"><a href="index.html">الرئيسية</a><a class="active" href="categories.html">الأقسام</a><a href="products.html">جميع المنتجات</a><a href="menu.html">تواصل معنا</a></nav><div class="icons"><a href="account.html">♙</a><a href="cart.html">🛒<sup class="cart-count" data-cart-count>0</sup></a></div></header><main class="page"><div class="page-title"><p class="eyebrow">EXPLORE BY CATEGORY</p><h1>الأقسام</h1><p>تصفح مجموعتنا حسب القسم الذي يناسبك.</p></div><div class="categories"><a class="category" href="products.html?category=men"><span>◉</span><b>مستلزمات رجالية</b></a><a class="category" href="products.html?category=women"><span>♡</span><b>مستلزمات نسائية</b></a><a class="category" href="products.html?category=couples"><span>∞</span><b>ألعاب زوجية</b></a><a class="category" href="products.html?category=accessories"><span>◇</span><b>إكسسوارات</b></a><a class="category" href="products.html?category=care"><span>♧</span><b>زيوت وعناية</b></a><a class="category" href="products.html?category=gifts"><span>✧</span><b>عروض وهدايا</b></a><a class="category" href="products.html"><span>✦</span><b>وصل حديثاً</b></a><a class="category" href="products.html"><span>★</span><b>الأكثر مبيعاً</b></a></div></main><footer><a class="logo" href="index.html">♛ BRANDLAND<small>متجر الألعاب الزوجية</small></a><small>© 2026 Brandland · نموذج واجهات تجريبي</small></footer></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brandland | الأقسام</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <button class="menu-button" aria-label="القائمة" onclick="toggleMenu()">☰</button>
+  <a class="logo" href="index.html">
+    <span class="crown">♛</span> 
+    <div class="logo-text">BRANDLAND</div>
+  </a>
+  <div class="icons">
+    <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
+  </div>
+</header>
+
+<main class="page">
+  <!-- عنوان الصفحة -->
+  <div class="section-header" style="margin-top: 20px;">
+    <h2 style="font-size: 28px;">الأقسام</h2>
+    <p style="color: var(--text-muted); font-size: 14px; margin-top: 5px;">تصفح جميع أقسام منتجاتنا</p>
+  </div>
+
+  <!-- شبكة الأقسام -->
+  <div class="categories-grid">
+    
+    <!-- قسم المستلزمات الرجالية -->
+    <a href="products.html?category=men" class="category-card">
+      <div class="cat-image-wrapper">
+        <!-- ضع رابط صورة المنتج الرجالي هنا -->
+        <img src="assets/product-2.jpg" alt="المستلزمات الرجالية" class="cat-img">
+      </div>
+      <div class="cat-title">المستلزمات الرجالية <span>❯</span></div>
+    </a>
+
+    <!-- قسم المستلزمات النسائية -->
+    <a href="products.html?category=women" class="category-card">
+      <div class="cat-image-wrapper">
+        <!-- ضع رابط صورة الهزاز هنا -->
+        <img src="assets/product-3.jpg" alt="المستلزمات النسائية" class="cat-img">
+      </div>
+      <div class="cat-title">المستلزمات النسائية <span>❯</span></div>
+    </a>
+
+    <!-- قسم الألعاب الزوجية -->
+    <a href="products.html?category=couples" class="category-card">
+      <div class="cat-image-wrapper">
+        <!-- ضع رابط صورة الأطقم هنا -->
+        <img src="assets/product-4.jpg" alt="الألعاب الزوجية" class="cat-img">
+      </div>
+      <div class="cat-title">الألعاب الزوجية <span>❯</span></div>
+    </a>
+
+    <!-- قسم حلقات الانتصاب -->
+    <a href="products.html?category=rings" class="category-card">
+      <div class="cat-image-wrapper">
+        <!-- ضع رابط صورة الحلقة هنا -->
+        <img src="assets/product-5.jpg" alt="حلقات الانتصاب" class="cat-img">
+      </div>
+      <div class="cat-title">حلقات الانتصاب <span>❯</span></div>
+    </a>
+
+    <!-- قسم أجهزة استمناء للرجال -->
+    <a href="products.html?category=masturbators" class="category-card">
+      <div class="cat-image-wrapper">
+        <!-- ضع رابط صورة الجهاز هنا -->
+        <img src="assets/product-6.jpg" alt="أجهزة استمناء للرجال" class="cat-img">
+      </div>
+      <div class="cat-title">أجهزة استمناء للرجال <span>❯</span></div>
+    </a>
+
+    <!-- قسم القضبان الصناعية -->
+    <a href="products.html?category=dildos" class="category-card">
+      <div class="cat-image-wrapper">
+        <!-- ضع رابط صورة القضيب هنا -->
+        <img src="assets/product-7.jpg" alt="القضبان الصناعية" class="cat-img">
+      </div>
+      <div class="cat-title">القضبان الصناعية <span>❯</span></div>
+    </a>
+
+  </div>
+</main>
+
+<!-- القائمة السفلية للجوال -->
+<nav class="bottom-nav">
+  <a href="index.html"><span>🏠</span>الرئيسية</a>
+  <a href="categories.html" class="active"><span>▦</span>الأقسام</a>
+  <a href="cart.html"><span>🛒</span>السلة</a>
+  <a href="account.html"><span>♙</span>حسابي</a>
+</nav>
+
+</body>
+</html>
