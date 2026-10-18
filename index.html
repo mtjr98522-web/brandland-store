@@ -8,77 +8,59 @@
 <script defer src="app.js"></script>
 </head>
 <body>
-<div class="announcement">تجربة راقية تبدأ من هنا · تغليف محايد وخصوصية تامة</div>
 
 <header class="top">
   <button class="menu-button" aria-label="القائمة" onclick="toggleMenu()">☰</button>
   <a class="logo" href="index.html">
     <span class="crown">♛</span> 
-    <div class="logo-text">BRANDLAND<small>متجر الألعاب الزوجية</small></div>
+    <div class="logo-text">BRANDLAND</div>
   </a>
-  <nav id="mainNav">
-    <a class="active" href="index.html">الرئيسية</a>
-    <a href="categories.html">الأقسام</a>
-    <a href="products.html">جميع المنتجات</a>
-    <a href="menu.html">تواصل معنا</a>
-  </nav>
   <div class="icons">
-    <a href="account.html" title="حسابي">♙</a>
     <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
   </div>
 </header>
 
 <main>
-  <!-- البانر الرئيسي (تم ربطه بصورة product-1) -->
+  <!-- البانر الرئيسي -->
   <section class="hero-banner">
+    <!-- هنا نضع صورة البانر الخاصة بك -->
+    <img src="assets/product-1.jpg" class="hero-image" alt="Brandland Banner">
+    
     <div class="hero-content">
       <h1>اكتشف عالم المتعة</h1>
       <p>منتجات مختارة بعناية لتعزيز علاقتك</p>
-      <a class="btn primary-btn" href="products.html">تسوق الآن <span>&lt;</span></a>
-    </div>
-    <div class="hero-image">
-      <img src="assets/product-1.jpg" alt="Brandland Banner">
+      <a class="primary-btn" href="products.html">تسوق الآن ></a>
     </div>
   </section>
 
   <!-- مميزات المتجر -->
   <section class="features-bar">
     <div class="feature-item">
-      <span class="feature-icon">🔒</span>
-      <b>خصوصية تامة</b>
+      <div class="feature-icon">🛡️</div>
+      <b>دفع آمن</b>
+      <small style="color:var(--text-muted)">خصوصية تامة</small>
     </div>
     <div class="feature-item">
-      <span class="feature-icon">💳</span>
-      <b>دفع عند الاستلام</b>
+      <div class="feature-icon">🚚</div>
+      <b>شحن سريع</b>
+      <small style="color:var(--text-muted)">لجميع المناطق</small>
     </div>
     <div class="feature-item">
-      <span class="feature-icon">🚚</span>
-      <b>توصيل سريع</b>
+      <div class="feature-icon">🏅</div>
+      <b>منتجات أصلية</b>
+      <small style="color:var(--text-muted)">جودة مضمونة</small>
     </div>
     <div class="feature-item">
-      <span class="feature-icon">🛡️</span>
-      <b>جودة عالية</b>
+      <div class="feature-icon">🎧</div>
+      <b>خدمة عملاء</b>
+      <small style="color:var(--text-muted)">على مدار الساعة</small>
     </div>
   </section>
 
   <!-- قسم المنتجات -->
   <section class="products-section">
     <div class="section-header">
-      <h2>جميع المنتجات</h2>
-    </div>
-    
-    <!-- شريط البحث -->
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="ابحث عن منتج..." onkeyup="filterProducts()">
-      <span class="search-icon">🔍</span>
-    </div>
-
-    <!-- أزرار التصفية -->
-    <div class="filter-tabs">
-      <button class="active" onclick="filterByTab('all', this)">الكل</button>
-      <button onclick="filterByTab('popular', this)">الأكثر مبيعاً</button>
-      <button onclick="filterByTab('new', this)">الأحدث</button>
-      <button onclick="filterByTab('rating', this)">الأعلى تقييماً</button>
+      <h2>أكثر المنتجات مبيعاً</h2>
     </div>
 
     <!-- شبكة المنتجات -->
@@ -96,13 +78,5 @@
   <a href="account.html"><span>♙</span>حسابي</a>
 </nav>
 
-<footer>
-  <a class="logo" href="index.html"><span class="crown">♛</span> BRANDLAND<small>متجر الألعاب الزوجية</small></a>
-  <p>أكثر من مجرد متجر… تجربة تهتم بالتفاصيل.</p>
-  <small>© 2026 Brandland · جميع الحقوق محفوظة</small>
-</footer>
-</body>
-</html>26 Brandland · جميع الحقوق محفوظة</small>
-</footer>
 </body>
 </html>
