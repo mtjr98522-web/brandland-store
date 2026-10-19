@@ -1015,3 +1015,141 @@ img { max-width: 100%; display: block; }
 .contact-btn:hover {
   transform: scale(1.05);
 }
+/* تصميم صفحة حسابي */
+.profile-header {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.15), transparent);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.avatar-icon {
+  font-size: 45px;
+  color: var(--gold);
+}
+
+.profile-name {
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.profile-welcome {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.profile-welcome strong {
+  color: var(--gold);
+}
+
+/* الإحصائيات */
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 15px 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.stat-icon {
+  font-size: 20px;
+  color: var(--gold);
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.stat-value {
+  color: var(--text-light);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.stat-divider {
+  width: 1px;
+  background: rgba(212, 175, 55, 0.3);
+  height: 40px;
+}
+
+/* قائمة الخيارات */
+.account-menu {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.account-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to left, rgba(212, 175, 55, 0.05), #000);
+  border: 1px solid var(--border-gold);
+  border-radius: 15px;
+  padding: 15px 20px;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.account-link:hover {
+  border-color: var(--gold);
+  background: linear-gradient(to left, rgba(212, 175, 55, 0.15), #000);
+}
+
+.link-text {
+  font-weight: bold;
+  font-size: 15px;
+  flex: 1;
+  text-align: right;
+}
+
+.link-icon {
+  font-size: 20px;
+  color: var(--gold);
+  margin-left: 15px;
+}
+
+.link-arrow {
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.logout-link {
+  border-color: #ff4d4d;
+}
+.logout-link .link-text, .logout-link .link-icon, .logout-link .link-arrow {
+  color: #ff4d4d;
+}
+
+/* تحديث القائمة السفلية لتشمل المفضلة */
+.bottom-nav {
+  justify-content: space-between;
+  padding: 10px 15px;
+}
