@@ -268,3 +268,19 @@ function toggleSideMenu() {
     }
   }
 }
+// دالة فتح وإغلاق القائمة الجانبية
+function toggleSideMenu() {
+  const menu = document.getElementById('sideMenu');
+  const overlay = document.getElementById('sideMenuOverlay');
+  
+  if (menu && overlay) {
+    menu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+}
