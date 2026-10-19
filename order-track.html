@@ -1,1 +1,134 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brandland | تتبع الطلب</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head><body><div class="announcement">متابعة طلبك</div><header class="top"><a class="logo" href="index.html"><span class="crown">♛</span> BRANDLAND<small>متجر الألعاب الزوجية</small></a><nav><a href="index.html">الرئيسية</a><a href="products.html">المنتجات</a><a href="menu.html">تواصل معنا</a></nav><div class="icons"><a href="cart.html">🛒<sup class="cart-count" data-cart-count>0</sup></a></div></header><main class="page narrow"><div class="page-title"><p class="eyebrow">ORDER TRACKING</p><h1>تتبع الطلب</h1><p>أدخل رقم الطلب التجريبي الذي ظهر بعد التأكيد.</p></div><form class="checkout-form" id="trackForm"><label>رقم الطلب<input id="trackNumber" required placeholder="BL-1026"></label><button class="btn wide" type="submit">تتبع الطلب</button><div id="trackResult"></div></form></main><footer><small>© 2026 Brandland · نموذج واجهات تجريبي</small></footer></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brandland | تتبع الطلب</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <a href="javascript:history.back()" class="menu-button" style="text-decoration:none; font-size:24px;">❮</a>
+  <a class="logo" href="index.html">
+    <span class="crown">♛</span> 
+    <div class="logo-text">BRANDLAND<small>- GAMES FOR COUPLES -</small></div>
+  </a>
+  <a href="index.html" class="settings-icon" style="color:var(--gold); font-size:24px; text-decoration:none;">
+    🏠
+  </a>
+</header>
+
+<main class="page">
+  
+  <!-- رأس الصفحة -->
+  <section class="track-header">
+    <h1>تتبع طلبك</h1>
+    <p>تابع حالة طلبك خطوة بخطوة حتى وصوله إليك</p>
+  </section>
+
+  <!-- معلومات الطلب (رقم الطلب والتاريخ) -->
+  <section class="order-info-card" id="orderInfoCard" style="display:none;">
+    <div class="info-item">
+      <span class="info-label">رقم الطلب</span>
+      <span class="info-value" id="displayOrderNum">#78452</span>
+      <span class="info-icon">📦</span>
+    </div>
+    <div class="info-divider"></div>
+    <div class="info-item">
+      <span class="info-label">تاريخ الطلب</span>
+      <span class="info-value" id="displayOrderDate">2025-10-19</span>
+      <span class="info-icon">📅</span>
+    </div>
+  </section>
+
+  <!-- شريط التقدم العلوي -->
+  <section class="track-progress" id="trackProgress" style="display:none;">
+    <div class="progress-step active" id="step1">
+      <div class="step-icon">📄</div>
+      <span>تم تأكيد الطلب</span>
+    </div>
+    <div class="progress-line active"></div>
+    <div class="progress-step" id="step2">
+      <div class="step-icon">📦</div>
+      <span>تم تجهيز الطلب</span>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" id="step3">
+      <div class="step-icon">🚚</div>
+      <span>في الطريق</span>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" id="step4">
+      <div class="step-icon">🏠</div>
+      <span>تم التوصيل</span>
+    </div>
+  </section>
+
+  <!-- قائمة الحالة (Timeline) -->
+  <section class="timeline-container" id="timelineContainer" style="display:none;">
+    <div class="timeline-item active">
+      <div class="timeline-icon">📄</div>
+      <div class="timeline-content">
+        <h3>تم تأكيد الطلب</h3>
+        <span class="timeline-date" id="timeStep1">2025-10-19 14:32</span>
+        <p>تم استلام طلبك بنجاح وسيتم البدء في تجهيزه قريباً.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">📦</div>
+      <div class="timeline-content">
+        <h3>تم تجهيز الطلب</h3>
+        <span class="timeline-date" id="timeStep2">قيد الانتظار</span>
+        <p>سيتم تجهيز طلبك وشحنه قريباً.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">🚚</div>
+      <div class="timeline-content">
+        <h3>في الطريق</h3>
+        <span class="timeline-date" id="timeStep3">قيد الانتظار</span>
+        <p>سيتم شحن طلبك وهو في طريقه إليك.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">🏠</div>
+      <div class="timeline-content">
+        <h3>تم التوصيل</h3>
+        <span class="timeline-date" id="timeStep4">قيد الانتظار</span>
+        <p>سيتم إشعارك عند وصول طلبك.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- زر البحث (يظهر فقط إذا لم يتم العثور على طلب) -->
+  <div class="no-order-box" id="noOrderBox">
+    <p>لم يتم العثور على طلبك، يرجى إدخال رقم الطلب للمتابعة.</p>
+    <form onsubmit="searchOrder(event)">
+      <input type="text" id="searchOrderInput" placeholder="أدخل رقم الطلب (مثال: BL-1234)" required style="width:100%; padding:12px; background:#000; border:1px solid var(--border-gold); border-radius:10px; color:#fff; margin-bottom:10px;">
+      <button type="submit" class="add-to-cart-btn">بحث عن الطلب</button>
+    </form>
+  </div>
+
+  <!-- معلومات الشحن والتواصل -->
+  <section class="shipping-info-card">
+    <div class="shipping-text">
+      <h4>معلومات الشحن</h4>
+      <p>سيتم إرسال تفاصيل الشحن إلى رقم هاتفك لاحقاً</p>
+    </div>
+    <a href="https://wa.me/966500000000" class="contact-btn-outline" target="_blank">🎧 تواصل معنا</a>
+  </section>
+
+</main>
+
+<!-- القائمة السفلية للجوال -->
+<nav class="bottom-nav">
+  <a href="index.html"><span>🏠</span>الرئيسية</a>
+  <a href="categories.html"><span>▦</span>الأقسام</a>
+  <a href="cart.html"><span>🛒</span>السلة</a>
+  <a href="account.html"><span>👤</span>حسابي</a>
+</nav>
+
+</body>
+</html>
