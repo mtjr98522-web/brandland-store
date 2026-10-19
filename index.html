@@ -9,19 +9,23 @@
 </head>
 <body>
 
+<!-- 1. الهيدر الرئيسي -->
 <header class="top">
-  <button class="menu-button" aria-label="القائمة" onclick="toggleMenu()">☰</button>
+  <button class="menu-button" aria-label="القائمة" onclick="toggleSideMenu()">☰</button> 
+  
   <a class="logo" href="index.html">
     <span class="crown">♛</span> 
     <div class="logo-text">BRANDLAND</div>
   </a>
+  
   <div class="icons">
     <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
   </div>
 </header>
 
+<!-- 2. محتوى الصفحة الرئيسية -->
 <main>
-  <!-- البانر الرئيسي (تم ربط الصورة الجديدة وإخفاء النصوص) -->
+  <!-- البانر الرئيسي -->
   <section class="hero-banner">
     <img src="assets/banner-main.jpg" class="hero-image" alt="Brandland Banner">
   </section>
@@ -56,20 +60,82 @@
       <h2>أكثر المنتجات مبيعاً</h2>
     </div>
 
-    <!-- شبكة المنتجات -->
     <div class="products-grid" id="allProducts">
       <!-- سيتم تعبئة المنتجات هنا عبر JavaScript -->
     </div>
   </section>
 </main>
 
-<!-- القائمة السفلية للجوال -->
+<!-- 3. القائمة السفلية للجوال -->
 <nav class="bottom-nav">
   <a href="index.html" class="active"><span>🏠</span>الرئيسية</a>
   <a href="categories.html"><span>▦</span>الأقسام</a>
   <a href="cart.html"><span>🛒</span>السلة</a>
   <a href="account.html"><span>♙</span>حسابي</a>
 </nav>
+
+<!-- 4. القائمة الجانبية (في النهاية تماماً) -->
+<div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
+<div class="side-menu" id="sideMenu">
+  <div class="side-menu-header">
+    <button class="close-btn" onclick="toggleSideMenu()">✕</button>
+    <div class="side-logo">
+      <span class="crown">♛</span>
+      <h2>BRANDLAND</h2>
+      <p>حيث تبدأ تجربتك المميزة</p>
+    </div>
+  </div>
+
+  <div class="side-menu-links">
+    <a href="index.html" class="side-link">
+      <span class="link-text">الرئيسية</span>
+      <span class="link-icon">🏠</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="categories.html" class="side-link">
+      <span class="link-text">الأقسام</span>
+      <span class="link-icon">▦</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="cart.html" class="side-link">
+      <span class="link-text">السلة</span>
+      <span class="link-icon">🛒</span>
+      <span class="cart-badge" data-cart-count>0</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="account.html" class="side-link">
+      <span class="link-text">حسابي</span>
+      <span class="link-icon">👤</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="order-track.html" class="side-link">
+      <span class="link-text">تتبع الطلب</span>
+      <span class="link-icon">📦</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="menu.html#faq" class="side-link">
+      <span class="link-text">الأسئلة الشائعة</span>
+      <span class="link-icon">❓</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="menu.html#contact" class="side-link">
+      <span class="link-text">تواصل معنا</span>
+      <span class="link-icon">🎧</span>
+      <span class="link-arrow">❮</span>
+    </a>
+  </div>
+
+  <div class="side-menu-footer">
+    <a href="https://wa.me/966500000000" class="whatsapp-btn" target="_blank">
+      <div class="wa-icon">💬</div>
+      <div class="wa-text">
+        <span>تواصل معنا عبر واتساب</span>
+        <strong>+966 500 000 000</strong>
+        <small>خدمة عملاء سريعة</small>
+      </div>
+    </a>
+  </div>
+</div>
 
 </body>
 </html>
