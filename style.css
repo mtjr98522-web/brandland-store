@@ -1153,3 +1153,28 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   padding: 10px 15px;
 }
+/* خلفية صفحة حسابي */
+.account-bg-header {
+  position: absolute;
+  top: 60px; /* أسفل الهيدر مباشرة */
+  left: 0;
+  width: 100%;
+  height: 250px;
+  /* هنا تضع رابط الصورة التي تريدها */
+  background-image: url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=800&auto=format&fit=crop'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* تعتيم الصورة لتظهر النصوص */
+  z-index: -1;
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+/* تعديل قسم الملف الشخصي ليكون شفافاً فوق الصورة */
+.profile-header {
+  position: relative;
+  z-index: 1;
+  background: transparent; /* إزالة التدرج القديم */
+  border-bottom: none;
+  padding-top: 50px;
+}
