@@ -201,3 +201,53 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   renderCart(); // <--- هذه الدالة ستعرض السلة
 });
+// دالة إرسال الطلب
+function submitOrder(event) {
+  event.preventDefault(); // منع إعادة تحميل الصفحة
+  
+  // جلب بيانات السلة
+  let cart = getCart();
+  
+  if (cart.length === 0) {
+    alert("سلتك فارغة! أضف منتجات أولاً.");
+    window.location.href = "products.html";
+    return;
+  }
+
+  // جلب بيانات العميل من النموذج
+  const form = event.target;
+  const customerData = {
+    name: form.name.value,
+    phone: form.phone.value,
+    city: form.city.value,
+    district: form.district.value,
+    address: form.address.value,
+    payment: form.payment.value
+  };
+
+  // حفظ الطلب في ذاكرة المتصفح
+  const orderData = {
+    customer: customerData,
+    items: cart,
+    total: getCartTotal(),
+    date: new Date().toISOString()
+  };
+  
+  localStorage.setItem("brandlandLastOrder", JSON.stringify(orderData));
+
+  // تفريغ السلة
+  setCart([]);
+
+  // الانتقال لصفحة النجاح
+  window.location.href = "order-success.html";
+}
+
+// حساب إجمالي السلة (دالة مساعدة)
+function getCartTotal() {
+  let cart = getCart();
+  let subtotal = cart.reduce((sum, item) => {
+    let product = PRODUCTS.find(p => p.id === item.id);
+    return sum + (product ? product.price * item.qty : 0);
+  }, 0);
+  return subtotal + (subtotal > 0 ? 26 : 0); // إضافة رسوم التوصيل
+}
