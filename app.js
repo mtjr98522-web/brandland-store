@@ -343,3 +343,60 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   renderWishlist(); // عرض المفضلة إذا كنا في صفحتها
 });
+// --- وظائف تتبع الطلب ---
+
+// دالة البحث عن طلب برقمه
+function searchOrder(event) {
+  event.preventDefault();
+  const orderNum = document.getElementById('searchOrderInput').value.trim();
+  
+  // جلب الطلب من الذاكرة
+  const savedOrder = JSON.parse(localStorage.getItem("brandlandLastOrder"));
+  
+  if (savedOrder && savedOrder.id === orderNum) {
+    showOrderDetails(savedOrder);
+  } else {
+    alert("لم يتم العثور على طلب بهذا الرقم. تأكد من الرقم وحاول مرة أخرى.");
+  }
+}
+
+// دالة عرض تفاصيل الطلب في الصفحة
+function showOrderDetails(order) {
+  // إخفاء صندوق البحث وإظهار التفاصيل
+  document.getElementById('noOrderBox').style.display = 'none';
+  document.getElementById('orderInfoCard').style.display = 'flex';
+  document.getElementById('trackProgress').style.display = 'flex';
+  document.getElementById('timelineContainer').style.display = 'block';
+
+  // تعبئة البيانات الأساسية
+  document.getElementById('displayOrderNum').textContent = "#" + order.id;
+  
+  // تنسيق التاريخ
+  const date = new Date(order.date);
+  document.getElementById('displayOrderDate').textContent = date.toLocaleDateString('ar-SA');
+  
+  // عرض وقت الخطوة الأولى
+  document.getElementById('timeStep1').textContent = date.toLocaleDateString('ar-SA') + ' ' + date.toLocaleTimeString('ar-SA', {hour: '2-digit', minute:'2-digit'});
+
+  // ملاحظة: بما أن هذا متجر تجريبي، سنفترض أن الطلب في الخطوة الأولى فقط
+  // في متجر حقيقي، يتم جلب حالة الطلب من قاعدة البيانات
+}
+
+// عند تحميل الصفحة، إذا كان هناك رابط يحتوي على رقم طلب، أو طلب محفوظ، اعرضه تلقائياً
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const orderIdFromUrl = urlParams.get('order');
+  
+  if (orderIdFromUrl) {
+    document.getElementById('searchOrderInput').value = orderIdFromUrl;
+    // محاكاة حدث الضغط على البحث
+    const fakeEvent = { preventDefault: () => {} };
+    searchOrder(fakeEvent);
+  } else {
+    // التحقق مما إذا كان آخر طلب محفوظ في الذاكرة
+    const savedOrder = JSON.parse(localStorage.getItem("brandlandLastOrder"));
+    if (savedOrder) {
+      showOrderDetails(savedOrder);
+    }
+  }
+});
