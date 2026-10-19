@@ -1,1 +1,137 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brandland | حسابي</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head><body><div class="announcement">أهلاً بك في Brandland</div><header class="top"><button class="menu-button" onclick="toggleMenu()">☰</button><a class="logo" href="index.html"><span class="crown">♛</span> BRANDLAND<small>متجر الألعاب الزوجية</small></a><nav id="mainNav"><a href="index.html">الرئيسية</a><a href="categories.html">الأقسام</a><a href="products.html">المنتجات</a><a href="menu.html">تواصل معنا</a></nav><div class="icons"><a href="cart.html">🛒<sup class="cart-count" data-cart-count>0</sup></a></div></header><main class="page narrow"><div class="page-title"><p class="eyebrow">YOUR ACCOUNT</p><h1>حسابي</h1><p>في النسخة التجريبية يمكنك تتبع الطلب باستخدام رقم الطلب.</p></div><div class="checkout-form"><h2>تتبع طلبك</h2><form onsubmit="event.preventDefault();location.href='order-track.html?order='+encodeURIComponent(this.order.value)"><label>رقم الطلب<input name="order" required placeholder="مثال: BL-1026"></label><button class="btn wide" type="submit">البحث عن الطلب</button></form><p class="notice-box">تسجيل الدخول الكامل يحتاج إلى خادم وقاعدة بيانات عند تطوير المتجر للإطلاق.</p></div></main><footer><small>© 2026 Brandland · نموذج واجهات تجريبي</small></footer></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brandland | حسابي</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <!-- زر الإشعارات -->
+  <a href="#" class="notification-icon" style="position:relative; color:var(--gold); font-size:20px; text-decoration:none;">
+    🔔<span style="position:absolute; top:-5px; right:-5px; background:var(--gold); color:#000; font-size:10px; font-weight:bold; border-radius:50%; width:15px; height:15px; display:flex; align-items:center; justify-content:center;">3</span>
+  </a>
+  
+  <a class="logo" href="index.html">
+    <span class="crown">♛</span> 
+    <div class="logo-text">BRANDLAND<small>لعبة تجمعكما</small></div>
+  </a>
+  
+  <!-- زر الإعدادات -->
+  <a href="#" class="settings-icon" style="color:var(--gold); font-size:24px; text-decoration:none;">
+    ⚙️
+  </a>
+</header>
+
+<main class="page">
+  
+  <!-- قسم الملف الشخصي -->
+  <section class="profile-header">
+    <div class="profile-avatar">
+      <span class="avatar-icon">👤</span>
+    </div>
+    <h1 class="profile-name">حسابي</h1>
+    <p class="profile-welcome">👑 مرحباً بك في <strong>Brandland</strong></p>
+  </section>
+
+  <!-- إحصائيات سريعة -->
+  <section class="profile-stats">
+    <div class="stat-item">
+      <span class="stat-icon">💳</span>
+      <span class="stat-label">رصيدك</span>
+      <span class="stat-value">0 ر.س</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-icon">📦</span>
+      <span class="stat-label">طلباتي</span>
+      <span class="stat-value">3</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-icon">🤍</span>
+      <span class="stat-label">المفضلة</span>
+      <span class="stat-value">5</span>
+    </div>
+  </section>
+
+  <!-- قائمة الخيارات -->
+  <section class="account-menu">
+    <a href="#" class="account-link">
+      <span class="link-text">معلوماتي الشخصية</span>
+      <span class="link-icon">👤</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="order-track.html" class="account-link">
+      <span class="link-text">طلباتي</span>
+      <span class="link-icon">📦</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="#" class="account-link">
+      <span class="link-text">المفضلة</span>
+      <span class="link-icon">🤍</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="#" class="account-link">
+      <span class="link-text">عناويني</span>
+      <span class="link-icon">📍</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="#" class="account-link">
+      <span class="link-text">طرق الدفع</span>
+      <span class="link-icon">💳</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="#" class="account-link">
+      <span class="link-text">الإشعارات</span>
+      <span class="link-icon">🔔</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="menu.html#contact" class="account-link">
+      <span class="link-text">تواصل معنا</span>
+      <span class="link-icon">🎧</span>
+      <span class="link-arrow">❮</span>
+    </a>
+    <a href="index.html" class="account-link logout-link">
+      <span class="link-text">تسجيل الخروج</span>
+      <span class="link-icon">🚪</span>
+      <span class="link-arrow">❮</span>
+    </a>
+  </section>
+
+</main>
+
+<!-- القائمة السفلية الجديدة -->
+<nav class="bottom-nav">
+  <a href="index.html"><span>🏠</span>الرئيسية</a>
+  <a href="categories.html"><span>▦</span>الأقسام</a>
+  <a href="cart.html"><span>🛒</span>السلة</a>
+  <a href="#"><span>🤍</span>المفضلة</a>
+  <a href="account.html" class="active"><span>👤</span>حسابي</a>
+</nav>
+
+<!-- القائمة الجانبية -->
+<div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
+<div class="side-menu" id="sideMenu">
+  <div class="side-menu-header">
+    <button class="close-btn" onclick="toggleSideMenu()">✕</button>
+    <div class="side-logo">
+      <span class="crown">♛</span>
+      <h2>BRANDLAND</h2>
+      <p>حيث تبدأ تجربتك المميزة</p>
+    </div>
+  </div>
+  <div class="side-menu-links">
+    <a href="index.html" class="side-link"><span class="link-text">الرئيسية</span><span class="link-icon">🏠</span><span class="link-arrow">❮</span></a>
+    <a href="categories.html" class="side-link"><span class="link-text">الأقسام</span><span class="link-icon">▦</span><span class="link-arrow">❮</span></a>
+    <a href="cart.html" class="side-link"><span class="link-text">السلة</span><span class="link-icon">🛒</span><span class="link-arrow">❮</span></a>
+    <a href="account.html" class="side-link"><span class="link-text">حسابي</span><span class="link-icon">👤</span><span class="link-arrow">❮</span></a>
+    <a href="menu.html#faq" class="side-link"><span class="link-text">الأسئلة الشائعة</span><span class="link-icon">❓</span><span class="link-arrow">❮</span></a>
+  </div>
+</div>
+
+</body>
+</html>
