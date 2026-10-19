@@ -251,3 +251,20 @@ function getCartTotal() {
   }, 0);
   return subtotal + (subtotal > 0 ? 26 : 0); // إضافة رسوم التوصيل
 }
+// دالة فتح وإغلاق القائمة الجانبية
+function toggleSideMenu() {
+  const menu = document.getElementById('sideMenu');
+  const overlay = document.getElementById('sideMenuOverlay');
+  
+  if (menu && overlay) {
+    menu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    
+    // منع التمرير في الصفحة الخلفية عند فتح القائمة
+    if (menu.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+}
