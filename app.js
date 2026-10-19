@@ -284,3 +284,62 @@ function toggleSideMenu() {
     }
   }
 }
+// --- وظائف المفضلة ---
+
+// جلب المفضلة من الذاكرة
+function getWishlist() {
+  try { return JSON.parse(localStorage.getItem("brandlandWishlist") || "[]"); } catch (e) { return []; }
+}
+
+// حفظ المفضلة
+function setWishlist(w) {
+  localStorage.setItem("brandlandWishlist", JSON.stringify(w));
+}
+
+// إضافة أو إزالة منتج من المفضلة
+function toggleFav(btn) {
+  const productId = parseInt(btn.getAttribute('data-id'));
+  let wishlist = getWishlist();
+  
+  if (wishlist.includes(productId)) {
+    wishlist = wishlist.filter(id => id !== productId);
+    btn.classList.remove('active');
+    btn.innerHTML = '♡';
+    toast("تمت الإزالة من المفضلة");
+  } else {
+    wishlist.push(productId);
+    btn.classList.add('active');
+    btn.innerHTML = '♥';
+    toast("تمت الإضافة إلى المفضلة");
+  }
+  setWishlist(wishlist);
+}
+
+// عرض المنتجات في صفحة المفضلة
+function renderWishlist() {
+  const container = document.getElementById("wishlistProducts");
+  if (!container) return;
+
+  let wishlist = getWishlist();
+  
+  if (wishlist.length === 0) {
+    container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px 20px; color: var(--text-muted);"><h3>قائمة المفضلة فارغة</h3><p style="margin-top:10px;">تصفح المنتجات واضغط على القلب لإضافتها هنا.</p><a href="products.html" class="primary-btn" style="display:inline-block; margin-top:15px;">تصفح المنتجات</a></div>';
+    return;
+  }
+
+  let favProducts = PRODUCTS.filter(p => wishlist.includes(p.id));
+  container.innerHTML = favProducts.map(productCard).join("");
+}
+
+// تحديث زر القلب عند تحميل الصفحة (ليظهر مملوءاً إذا كان المنتج في المفضلة)
+document.addEventListener("DOMContentLoaded", () => {
+  let wishlist = getWishlist();
+  document.querySelectorAll('.fav-btn').forEach(btn => {
+    let id = parseInt(btn.getAttribute('data-id'));
+    if (wishlist.includes(id)) {
+      btn.classList.add('active');
+      btn.innerHTML = '♥';
+    }
+  });
+  renderWishlist(); // عرض المفضلة إذا كنا في صفحتها
+});
