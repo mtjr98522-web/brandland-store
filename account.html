@@ -26,10 +26,13 @@
   </a>
 </header>
 
-<main class="page">
+<main class="page" style="position: relative;">
   
+  <!-- خلفية صفحة حسابي (تمت إضافتها هنا) -->
+  <div class="account-bg-header"></div>
+
   <!-- قسم الملف الشخصي -->
-  <section class="profile-header">
+  <section class="profile-header" style="position: relative; z-index: 2; background: transparent;">
     <div class="profile-avatar">
       <span class="avatar-icon">👤</span>
     </div>
@@ -38,7 +41,7 @@
   </section>
 
   <!-- إحصائيات سريعة -->
-  <section class="profile-stats">
+  <section class="profile-stats" style="position: relative; z-index: 2;">
     <div class="stat-item">
       <span class="stat-icon">💳</span>
       <span class="stat-label">رصيدك</span>
@@ -59,7 +62,7 @@
   </section>
 
   <!-- قائمة الخيارات -->
-  <section class="account-menu">
+  <section class="account-menu" style="position: relative; z-index: 2;">
     <a href="#" class="account-link">
       <span class="link-text">معلوماتي الشخصية</span>
       <span class="link-icon">👤</span>
@@ -70,7 +73,8 @@
       <span class="link-icon">📦</span>
       <span class="link-arrow">❮</span>
     </a>
-    <a href="#" class="account-link">
+    <!-- تم ربط المفضلة هنا -->
+    <a href="wishlist.html" class="account-link">
       <span class="link-text">المفضلة</span>
       <span class="link-icon">🤍</span>
       <span class="link-arrow">❮</span>
@@ -104,12 +108,12 @@
 
 </main>
 
-<!-- القائمة السفلية الجديدة -->
+<!-- القائمة السفلية الجديدة (تم ربط المفضلة هنا) -->
 <nav class="bottom-nav">
   <a href="index.html"><span>🏠</span>الرئيسية</a>
   <a href="categories.html"><span>▦</span>الأقسام</a>
   <a href="cart.html"><span>🛒</span>السلة</a>
-  <a href="#"><span>🤍</span>المفضلة</a>
+  <a href="wishlist.html"><span>🤍</span>المفضلة</a>
   <a href="account.html" class="active"><span>👤</span>حسابي</a>
 </nav>
 
