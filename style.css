@@ -522,3 +522,152 @@ img { max-width: 100%; display: block; }
 .category-card:hover .cat-img {
   transform: scale(1.05); /* تكبير الصورة قليلاً عند التمرير */
 }
+/* تصميم صفحة تأكيد الطلب */
+.checkout-form-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.form-section {
+  margin-bottom: 25px;
+}
+
+.section-title {
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  background: #000;
+  border: 1px solid var(--border-gold);
+  border-radius: 10px;
+  padding: 12px 40px 12px 15px;
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.input-icon {
+  position: absolute;
+  right: 15px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+/* طريقة الدفع */
+.payment-method {
+  display: flex;
+  align-items: center;
+  background: #000;
+  border: 1px solid var(--border-gold);
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.payment-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-title {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.payment-subtitle {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.payment-icon {
+  font-size: 24px;
+  color: var(--gold);
+  margin-left: 15px;
+}
+
+.payment-method input[type="radio"] {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.payment-method input[type="radio"]:checked ~ .checkmark::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* زر التأكيد */
+.confirm-order-btn {
+  background: linear-gradient(to right, #d4af37, #f9e596);
+  color: #000;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.confirm-order-btn:hover {
+  transform: scale(1.02);
+}
