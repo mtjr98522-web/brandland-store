@@ -1,1 +1,154 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brandland | القائمة والتواصل</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head><body><div class="announcement">نحن هنا لمساعدتك</div><header class="top"><button class="menu-button" onclick="toggleMenu()">☰</button><a class="logo" href="index.html"><span class="crown">♛</span> BRANDLAND<small>متجر الألعاب الزوجية</small></a><nav id="mainNav"><a href="index.html">الرئيسية</a><a href="categories.html">الأقسام</a><a href="products.html">المنتجات</a><a class="active" href="menu.html">تواصل معنا</a></nav><div class="icons"><a href="cart.html">🛒<sup class="cart-count" data-cart-count>0</sup></a></div></header><main class="page narrow"><div class="page-title"><p class="eyebrow">BRANDLAND SUPPORT</p><h1>القائمة والمساعدة</h1><p>روابط سريعة للوصول إلى صفحات المتجر.</p></div><div class="menu-panel"><a href="index.html">الرئيسية <span>⌂</span></a><a href="categories.html">الأقسام <span>▦</span></a><a href="products.html">جميع المنتجات <span>◇</span></a><a href="cart.html">السلة <span>🛒</span></a><a href="account.html">حسابي <span>♙</span></a><a href="order-track.html">تتبع الطلب <span>□</span></a><a href="#faq">الأسئلة الشائعة <span>ⓘ</span></a><a href="#contact">تواصل معنا <span>♧</span></a></div><section id="faq" class="section"><h2>الأسئلة الشائعة</h2><details><summary>كيف أدفع قيمة الطلب؟</summary><p class="muted">طريقة الدفع المعتمدة في هذا النموذج هي الدفع عند الاستلام.</p></details><details><summary>هل التغليف محايد؟</summary><p class="muted">يمكن تفعيل التغليف المحايد عند تجهيز عمليات الشحن الفعلية.</p></details><details><summary>هل يمكنني تتبع طلبي؟</summary><p class="muted">بعد إنشاء طلب تجريبي يمكنك استخدام رقم الطلب في صفحة تتبع الطلب.</p></details></section><section id="privacy" class="banner"><h2>الخصوصية أولاً</h2><p>لا تدخل بيانات حساسة في هذا النموذج التجريبي؛ لا توجد خوادم أو معالجة فعلية للطلبات.</p></section><div id="contact" class="contact-card"><h3>تواصل معنا</h3><p>أضف رقم خدمة العملاء الرسمي قبل إطلاق المتجر.</p><a class="btn" href="products.html">تصفح المنتجات</a></div></main><footer><small>© 2026 Brandland · نموذج واجهات تجريبي</small></footer></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brandland | الأسئلة الشائعة</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <button class="menu-button" aria-label="القائمة" onclick="toggleSideMenu()">☰</button> 
+  <a class="logo" href="index.html">
+    <span class="crown">♛</span> 
+    <div class="logo-text">BRANDLAND</div>
+  </a>
+  <div class="icons">
+    <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
+  </div>
+</header>
+
+<main>
+  <!-- رأس الصفحة -->
+  <section class="page-header-faq">
+    <h1>الأسئلة الشائعة</h1>
+    <p>نحن هنا لمساعدتك، إليك إجابات لأكثر الأسئلة شيوعاً</p>
+  </section>
+
+  <!-- قائمة الأسئلة -->
+  <section class="faq-container">
+    
+    <details class="faq-item">
+      <summary>
+        <span class="faq-icon">💳</span>
+        <span class="faq-question">ما هي طرق الدفع المتاحة؟</span>
+        <span class="faq-arrow">❯</span>
+      </summary>
+      <div class="faq-answer">
+        <p>نوفر حالياً خدمة <strong>الدفع عند الاستلام</strong> (نقداً للمندوب). يمكنك استلام طلبك وفحصه ثم الدفع. نعمل على إضافة بوابات الدفع الإلكتروني (مدى، فيزا، Apple Pay) قريباً جداً.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-icon">🚚</span>
+        <span class="faq-question">كم يستغرق وقت التوصيل؟</span>
+        <span class="faq-arrow">❯</span>
+      </summary>
+      <div class="faq-answer">
+        <p>يستغرق التوصيل عادة من <strong>2 إلى 5 أيام عمل</strong> داخل المدن الرئيسية، وقد يزيد قليلاً في المناطق البعيدة. سيتم التواصل معك لتأكيد موعد التسليم.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-icon">📍</span>
+        <span class="faq-question">هل التوصيل متوفر لجميع المناطق؟</span>
+        <span class="faq-arrow">❯</span>
+      </summary>
+      <div class="faq-answer">
+        <p>نعم، نوفر خدمة الشحن لجميع مناطق المملكة العربية السعودية ودول الخليج. يتم تحديد رسوم الشحن بناءً على موقعك عند إتمام الطلب.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-icon">↩️</span>
+        <span class="faq-question">هل يمكنني إرجاع أو استبدال المنتج؟</span>
+        <span class="faq-arrow">❯</span>
+      </summary>
+      <div class="faq-answer">
+        <p>بسبب طبيعة المنتجات (منتجات شخصية)، لا يمكن إرجاعها أو استبدالها بعد فتح التغليف، حفاظاً على معايير النظافة والسلامة. ومع ذلك، إذا وصلك منتج تالف أو به عيب مصنعي، يمكنك التواصل معنا فوراً خلال 24 ساعة لاستبداله.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-icon">🔒</span>
+        <span class="faq-question">كيف أضمن خصوصية طلبي؟</span>
+        <span class="faq-arrow">❯</span>
+      </summary>
+      <div class="faq-answer">
+        <p>خصوصيتك هي أولويتنا القصوى. جميع الطلبات تُشحن في <strong>تغليف محايد تماماً</strong> (كرتون عادي بدون أي أسماء أو صور توضح محتوى الطرد). كما لا يتم كتابة اسم المتجر في كشف حسابك البنكي.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-icon">📄</span>
+        <span class="faq-question">ما هي سياسة المتجر فيما يخص المنتجات؟</span>
+        <span class="faq-arrow">❯</span>
+      </summary>
+      <div class="faq-answer">
+        <p>جميع منتجاتنا أصلية ومستوردة من موردين معتمدين، ومصنوعة من مواد آمنة على الجسم (مثل السيليكون الطبي). نضمن لك جودة كل منتج قبل تغليفه وشحنه.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span class="faq-icon">🎧</span>
+        <span class="faq-question">هل لديكم خدمة العملاء؟</span>
+        <span class="faq-arrow">❯</span>
+      </summary>
+      <div class="faq-answer">
+        <p>نعم، فريقنا متواجد لخدمتك عبر الواتساب من الساعة 10 صباحاً حتى 10 مساءً. يمكنك سؤالك عن أي منتج أو طلب، وسنرد عليك بأسرع وقت ممكن.</p>
+      </div>
+    </details>
+
+  </section>
+
+  <!-- بطاقة تواصل معنا -->
+  <section class="contact-card-faq">
+    <div class="contact-icon">🎧</div>
+    <div class="contact-info">
+      <h3>لم تجد إجابة لسؤالك؟</h3>
+      <p>تواصل معنا مباشرة وسنكون سعداء بمساعدتك</p>
+      <a href="https://wa.me/966500000000" class="contact-btn" target="_blank">تواصل معنا 💬</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- القائمة السفلية للجوال -->
+<nav class="bottom-nav">
+  <a href="index.html"><span>🏠</span>الرئيسية</a>
+  <a href="categories.html"><span>▦</span>الأقسام</a>
+  <a href="cart.html"><span>🛒</span>السلة</a>
+  <a href="account.html"><span>♙</span>حسابي</a>
+</nav>
+
+<!-- القائمة الجانبية -->
+<div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
+<div class="side-menu" id="sideMenu">
+  <div class="side-menu-header">
+    <button class="close-btn" onclick="toggleSideMenu()">✕</button>
+    <div class="side-logo">
+      <span class="crown">♛</span>
+      <h2>BRANDLAND</h2>
+      <p>حيث تبدأ تجربتك المميزة</p>
+    </div>
+  </div>
+  <div class="side-menu-links">
+    <a href="index.html" class="side-link"><span class="link-text">الرئيسية</span><span class="link-icon">🏠</span><span class="link-arrow">❮</span></a>
+    <a href="categories.html" class="side-link"><span class="link-text">الأقسام</span><span class="link-icon">▦</span><span class="link-arrow">❮</span></a>
+    <a href="cart.html" class="side-link"><span class="link-text">السلة</span><span class="link-icon">🛒</span><span class="link-arrow">❮</span></a>
+    <a href="account.html" class="side-link"><span class="link-text">حسابي</span><span class="link-icon">👤</span><span class="link-arrow">❮</span></a>
+    <a href="menu.html#faq" class="side-link"><span class="link-text">الأسئلة الشائعة</span><span class="link-icon">❓</span><span class="link-arrow">❮</span></a>
+    <a href="menu.html#contact" class="side-link"><span class="link-text">تواصل معنا</span><span class="link-icon">🎧</span><span class="link-arrow">❮</span></a>
+  </div>
+</div>
+
+</body>
+</html>
