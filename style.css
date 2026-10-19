@@ -947,3 +947,191 @@ img { max-width: 100%; display: block; }
 
 .logout-link { border-color: #ff4d4d; }
 .logout-link .link-text, .logout-link .link-icon, .logout-link .link-arrow { color: #ff4d4d; }
+/* --- تصميم صفحة تتبع الطلب --- */
+.track-header {
+  text-align: center;
+  padding: 30px 20px 20px;
+}
+
+.track-header h1 {
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.track-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* بطاقة معلومات الطلب */
+.order-info-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 20px 30px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  flex: 1;
+}
+
+.info-label { color: var(--text-muted); font-size: 12px; }
+.info-value { color: var(--gold); font-weight: bold; font-size: 18px; }
+.info-icon { font-size: 20px; color: var(--gold); margin-top: 5px; }
+.info-divider { width: 1px; height: 50px; background: rgba(212, 175, 55, 0.3); }
+
+/* شريط التقدم */
+.track-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  text-align: center;
+  opacity: 0.4; /* غير نشط */
+}
+
+.progress-step.active { opacity: 1; }
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--text-muted);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: var(--bg-dark);
+}
+
+.progress-step.active .step-icon {
+  border-color: var(--gold);
+  color: var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.progress-step span { font-size: 10px; color: var(--text-light); }
+.progress-step.active span { color: var(--gold); font-weight: bold; }
+
+.progress-line {
+  height: 2px;
+  background: var(--text-muted);
+  flex: 1;
+  margin: 0 -10px;
+  margin-bottom: 25px;
+  opacity: 0.4;
+}
+.progress-line.active { background: var(--gold); opacity: 1; }
+
+/* الخط الزمني (Timeline) */
+.timeline-container {
+  margin: 0 20px 30px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  position: relative;
+  opacity: 0.5;
+}
+
+.timeline-item.active { opacity: 1; }
+
+/* الخط الرأسي الواصل */
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: 20px; /* تعديل ليتوسط الأيقونة */
+  width: 2px;
+  height: calc(100% + 10px);
+  background: var(--text-muted);
+  z-index: 1;
+}
+.timeline-item.active:not(:last-child)::after { background: var(--gold); }
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--text-muted);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  z-index: 2;
+  color: var(--text-muted);
+}
+
+.timeline-item.active .timeline-icon {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.timeline-content h3 { color: var(--text-light); font-size: 16px; margin-bottom: 5px; }
+.timeline-item.active .timeline-content h3 { color: var(--gold); }
+.timeline-date { display: block; color: var(--text-muted); font-size: 12px; margin-bottom: 8px; }
+.timeline-content p { color: var(--text-muted); font-size: 13px; line-height: 1.5; }
+
+/* صندوق عدم وجود طلب */
+.no-order-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 20px 30px;
+  text-align: center;
+}
+.no-order-box p { color: var(--text-muted); margin-bottom: 15px; font-size: 14px; }
+
+/* بطاقة الشحن والتواصل */
+.shipping-info-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 20px 30px;
+}
+
+.shipping-text h4 { color: var(--gold); margin-bottom: 5px; font-size: 16px; }
+.shipping-text p { color: var(--text-muted); font-size: 12px; }
+
+.contact-btn-outline {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.contact-btn-outline:hover { background: var(--gold); color: #000; }
