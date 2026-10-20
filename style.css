@@ -1135,3 +1135,141 @@ img { max-width: 100%; display: block; }
   transition: all 0.3s;
 }
 .contact-btn-outline:hover { background: var(--gold); color: #000; }
+/* --- تصميم صفحة جميع المنتجات --- */
+
+/* شريط البحث */
+.search-container {
+  position: relative;
+  margin: 20px 15px;
+}
+
+.search-container input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 30px;
+  padding: 15px 45px 15px 20px;
+  color: var(--text-light);
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-container input:focus {
+  border-color: var(--gold);
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 18px;
+}
+
+/* أزرار التصفية */
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.filter-dropdown {
+  flex: 1;
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.filter-dropdown select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px;
+  padding: 12px 0;
+  appearance: none; /* إخفاء سهم المتصفح */
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-dropdown select option {
+  background: var(--bg-card);
+  color: var(--text-light);
+}
+
+.dropdown-icon {
+  color: var(--gold);
+  font-size: 16px;
+  position: absolute;
+  left: 15px;
+  pointer-events: none;
+}
+
+/* تعديلات بطاقة المنتج لتطابق الصورة */
+.product-card {
+  padding: 0; /* إزالة الحواف الداخلية لتلتصق الصورة */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.product-image {
+  border-radius: 0;
+  height: 160px; /* زيادة ارتفاع الصورة قليلاً */
+  margin-bottom: 0;
+}
+
+.product-title {
+  padding: 10px 15px 0;
+  font-size: 15px;
+}
+
+.product-price {
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.product-actions {
+  padding: 0 10px 15px;
+  gap: 8px;
+}
+
+.add-to-cart-btn {
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.buy-now-btn {
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 13px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.buy-now-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.fav-btn {
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5); /* خلفية شفافة للقلب */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
