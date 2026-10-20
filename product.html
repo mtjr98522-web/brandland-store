@@ -1,1 +1,98 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brandland | تفاصيل المنتج</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head><body><div class="announcement">تجربة راقية تبدأ من هنا · تغليف محايد وخصوصية تامة</div><header class="top"><button class="menu-button" onclick="toggleMenu()">☰</button><a class="logo" href="index.html"><span class="crown">♛</span> BRANDLAND<small>متجر الألعاب الزوجية</small></a><nav id="mainNav"><a href="index.html">الرئيسية</a><a href="categories.html">الأقسام</a><a class="active" href="products.html">المنتجات</a><a href="menu.html">تواصل معنا</a></nav><div class="icons"><a href="account.html">♙</a><a href="cart.html">🛒<sup class="cart-count" data-cart-count>0</sup></a></div></header><main class="page"><p class="breadcrumb"><a href="index.html">الرئيسية</a> / <a href="products.html">المنتجات</a> / تفاصيل المنتج</p><div id="productDetail"></div><section class="section"><div class="section-head"><h2>قد يعجبك أيضاً</h2><a href="products.html" class="text-link">عرض الكل ←</a></div><div class="products" id="relatedProducts"></div></section></main><footer><a class="logo" href="index.html">♛ BRANDLAND<small>متجر الألعاب الزوجية</small></a><small>© 2026 Brandland · نموذج واجهات تجريبي</small></footer></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brandland | جميع المنتجات</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <button class="menu-button" aria-label="القائمة" onclick="toggleSideMenu()">☰</button>
+  <a class="logo" href="index.html">
+    <span class="crown">♛</span> 
+    <div class="logo-text">BRANDLAND<small>متجر ألعاب زوجية</small></div>
+  </a>
+  <div class="icons">
+    <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
+  </div>
+</header>
+
+<main class="page">
+  
+  <!-- شريط البحث -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="ابحث عن منتجك المفضل..." onkeyup="filterProducts()">
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <!-- عنوان الصفحة -->
+  <div class="section-header" style="margin-top: 20px;">
+    <h2 style="font-size: 26px;">جميع المنتجات</h2>
+  </div>
+
+  <!-- أزرار التصفية -->
+  <div class="filter-controls">
+    <div class="filter-dropdown">
+      <select id="sortProducts" onchange="filterProducts()">
+        <option value="popular">الأكثر مبيعاً</option>
+        <option value="low">السعر: الأقل أولاً</option>
+        <option value="high">السعر: الأعلى أولاً</option>
+        <option value="new">الأحدث</option>
+      </select>
+      <span class="dropdown-icon">⇅</span>
+    </div>
+    
+    <div class="filter-dropdown">
+      <select id="categoryFilter" onchange="filterProducts()">
+        <option value="all">جميع الأقسام</option>
+        <option value="couples">ألعاب زوجية</option>
+        <option value="rings">حلقات الانتصاب</option>
+        <option value="vibrators">هزازات نسائية</option>
+        <option value="male_masturbators">أجهزة استمناء رجالي</option>
+        <option value="lingerie">الملابس الانجري</option>
+        <!-- يمكنك إضافة باقي الأقسام هنا -->
+      </select>
+      <span class="dropdown-icon">▦</span>
+    </div>
+  </div>
+
+  <!-- شبكة المنتجات -->
+  <div class="products-grid" id="allProducts">
+    <!-- سيتم تعبئة المنتجات هنا عبر JavaScript -->
+  </div>
+
+</main>
+
+<!-- القائمة السفلية للجوال -->
+<nav class="bottom-nav">
+  <a href="index.html"><span>🏠</span>الرئيسية</a>
+  <a href="categories.html"><span>▦</span>الأقسام</a>
+  <a href="cart.html"><span>🛒</span>السلة</a>
+  <a href="wishlist.html"><span>🤍</span>المفضلة</a>
+  <a href="account.html"><span>👤</span>حسابي</a>
+</nav>
+
+<!-- القائمة الجانبية -->
+<div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
+<div class="side-menu" id="sideMenu">
+  <div class="side-menu-header">
+    <button class="close-btn" onclick="toggleSideMenu()">✕</button>
+    <div class="side-logo">
+      <span class="crown">♛</span>
+      <h2>BRANDLAND</h2>
+      <p>حيث تبدأ تجربتك المميزة</p>
+    </div>
+  </div>
+  <div class="side-menu-links">
+    <a href="index.html" class="side-link"><span class="link-text">الرئيسية</span><span class="link-icon">🏠</span><span class="link-arrow">❮</span></a>
+    <a href="categories.html" class="side-link"><span class="link-text">الأقسام</span><span class="link-icon">▦</span><span class="link-arrow">❮</span></a>
+    <a href="cart.html" class="side-link"><span class="link-text">السلة</span><span class="link-icon">🛒</span><span class="link-arrow">❮</span></a>
+    <a href="account.html" class="side-link"><span class="link-text">حسابي</span><span class="link-icon">👤</span><span class="link-arrow">❮</span></a>
+  </div>
+</div>
+
+</body>
+</html>
