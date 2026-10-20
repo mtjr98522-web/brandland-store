@@ -6,131 +6,112 @@
 <title>Brandland | الرئيسية</title>
 <link rel="stylesheet" href="style.css">
 <script defer src="app.js"></script>
+<style>
+  /* إخفاء شريط التمرير وجعل الصفحة تملأ الشاشة */
+  body.home-page {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0 !important; /* إزالة المساحة السفلية */
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* تحديد عرض أقصى للشاشات الكبيرة */
+    margin: 0 auto;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* تصميم الأزرار الشفافة (Hotspots) */
+  .hotspot {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    /* border: 1px solid red;  <-- إزالة التعليق لرؤية أماكن الأزرار أثناء التجربة */
+  }
+
+  /* الشريط العلوي */
+  .hs-menu { top: 2%; right: 4%; width: 10%; height: 5%; }
+  .hs-search { top: 2%; left: 4%; width: 10%; height: 5%; }
+  .hs-logo { top: 1%; left: 40%; width: 20%; height: 6%; }
+  .hs-cart-top { top: 2%; right: 18%; width: 12%; height: 5%; }
+  .hs-wish-top { top: 2%; right: 32%; width: 10%; height: 5%; }
+
+  /* البانر */
+  .hs-hero-shop { top: 23%; left: 4%; width: 42%; height: 4%; }
+  .hs-hero-lulu { top: 23%; left: 52%; width: 42%; height: 4%; }
+
+  /* الأقسام (6 أقسام) */
+  .hs-cat-1 { top: 44%; right: 4%; width: 28%; height: 8%; }
+  .hs-cat-2 { top: 44%; right: 36%; width: 28%; height: 8%; }
+  .hs-cat-3 { top: 44%; right: 68%; width: 28%; height: 8%; }
+  
+  .hs-cat-4 { top: 57%; right: 4%; width: 28%; height: 8%; }
+  .hs-cat-5 { top: 57%; right: 36%; width: 28%; height: 8%; }
+  .hs-cat-6 { top: 57%; right: 68%; width: 28%; height: 8%; }
+
+  /* المنتجات */
+  .hs-prod-1 { top: 77%; right: 4%; width: 44%; height: 8%; }
+  .hs-prod-2 { top: 77%; right: 52%; width: 44%; height: 8%; }
+
+  /* شريط التنقل السفلي */
+  .hs-nav-home { bottom: 1%; right: 2%; width: 16%; height: 5%; }
+  .hs-nav-cats { bottom: 1%; right: 20%; width: 16%; height: 5%; }
+  .hs-nav-shop { bottom: 1%; right: 40%; width: 18%; height: 6%; }
+  .hs-nav-wish { bottom: 1%; right: 60%; width: 16%; height: 5%; }
+  .hs-nav-cart { bottom: 1%; right: 80%; width: 18%; height: 5%; }
+
+  /* إخفاء شريط التنقل القديم */
+  .bottom-nav-new { display: none !important; }
+</style>
 </head>
 <body class="home-page">
 
-<!-- 1. الشريط العلوي الجديد -->
-<header class="top-header-new">
-  <button class="menu-btn" onclick="toggleSideMenu()">☰</button>
-  <div class="header-icons">
-    <a href="cart.html" class="icon-link">
-      🛒<span class="badge" data-cart-count>0</span>
-    </a>
-    <a href="wishlist.html" class="icon-link">🤍</a>
-  </div>
+<div class="image-wrapper">
+  <!-- الصورة الأساسية التي تحتوي على التصميم كاملاً -->
+  <img src="assets/home-bg-new.jpg" alt="Brandland Store">
+
+  <!-- الأزرار الشفافة (Hotspots) -->
   
-  <a class="header-logo" href="index.html">
-    <img src="assets/logo.png" alt="Brandland">
-  </a>
+  <!-- الهيدر -->
+  <a href="#" class="hotspot hs-menu" onclick="toggleSideMenu(); return false;"></a>
+  <a href="products.html" class="hotspot hs-search"></a>
+  <a href="index.html" class="hotspot hs-logo"></a>
+  <a href="cart.html" class="hotspot hs-cart-top"></a>
+  <a href="wishlist.html" class="hotspot hs-wish-top"></a>
+
+  <!-- البانر -->
+  <a href="products.html" class="hotspot hs-hero-shop"></a>
+  <a href="https://wa.me/966500000000" class="hotspot hs-hero-lulu"></a>
+
+  <!-- الأقسام -->
+  <a href="category-male_masturbators.html" class="hotspot hs-cat-1"></a>
+  <a href="category-female_enhancers.html" class="hotspot hs-cat-2"></a>
+  <a href="category-couples.html" class="hotspot hs-cat-3"></a>
   
-  <div class="header-search">
-    <a href="products.html" class="icon-link">🔍</a>
-  </div>
-</header>
+  <a href="category-care.html" class="hotspot hs-cat-4"></a>
+  <a href="category-gifts.html" class="hotspot hs-cat-5"></a>
+  <a href="category-best-sellers.html" class="hotspot hs-cat-6"></a>
 
-<main>
-  <!-- 2. البانر الرئيسي الجديد -->
-  <section class="hero-section">
-    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop');"></div>
-    <div class="hero-overlay"></div>
-    
-    <div class="hero-content-new">
-      <div class="hero-text">
-        <h1>BRANDLAND</h1>
-        <h2>ألعاب زوجية في السعودية</h2>
-        <p>خصوصية تامة • تغليف سري • الدفع عند الاستلام</p>
-        <div class="hero-buttons">
-          <a href="products.html" class="btn-gold">🛒 تسوق الآن</a>
-          <a href="https://wa.me/966500000000" class="btn-outline">💬 اسأل لولو</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- مؤشرات البانر -->
-    <div class="hero-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </section>
+  <!-- المنتجات -->
+  <a href="product.html?id=4" class="hotspot hs-prod-1"></a>
+  <a href="product.html?id=8" class="hotspot hs-prod-2"></a>
 
-  <!-- 3. قسم المميزات الجديد -->
-  <section class="features-section-new">
-    <div class="feature-box">
-      <span class="feat-icon">💵</span>
-      <span>الدفع عند الاستلام</span>
-    </div>
-    <div class="feature-box">
-      <span class="feat-icon">🚚</span>
-      <span>توصيل لكل المملكة</span>
-    </div>
-    <div class="feature-box">
-      <span class="feat-icon">🛡️</span>
-      <span>خصوصية تامة</span>
-    </div>
-  </section>
+  <!-- شريط التنقل السفلي -->
+  <a href="index.html" class="hotspot hs-nav-home"></a>
+  <a href="categories.html" class="hotspot hs-nav-cats"></a>
+  <a href="products.html" class="hotspot hs-nav-shop"></a>
+  <a href="wishlist.html" class="hotspot hs-nav-wish"></a>
+  <a href="cart.html" class="hotspot hs-nav-cart"></a>
+</div>
 
-  <!-- 4. قسم تسوق حسب القسم -->
-  <section class="categories-section-new">
-    <div class="section-title-new">
-      <span class="line"></span>
-      <h2>تسوق حسب القسم</h2>
-      <span class="line"></span>
-    </div>
-    
-    <div class="categories-grid-new">
-      <a href="category-male_masturbators.html" class="cat-item">
-        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=200&auto=format&fit=crop" alt="رجالي"></div>
-        <span>مستلزمات رجالية</span>
-      </a>
-      <a href="category-female_enhancers.html" class="cat-item">
-        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=200&auto=format&fit=crop" alt="نسائي"></div>
-        <span>مستلزمات نسائية</span>
-      </a>
-      <a href="category-couples.html" class="cat-item">
-        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=200&auto=format&fit=crop" alt="زوجي"></div>
-        <span>ألعاب زوجية</span>
-      </a>
-      <a href="category-best-sellers.html" class="cat-item">
-        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1615486364559-57d0e6e8e33c?q=80&w=200&auto=format&fit=crop" alt="مبيع"></div>
-        <span>الأكثر مبيعًا</span>
-      </a>
-      <a href="category-gifts.html" class="cat-item">
-        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=200&auto=format&fit=crop" alt="هدايا"></div>
-        <span>أطقم هدايا</span>
-      </a>
-      <a href="category-care.html" class="cat-item">
-        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=200&auto=format&fit=crop" alt="زيوت"></div>
-        <span>زيوت ومساج</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- 5. قسم المنتجات الأكثر طلباً -->
-  <section class="products-section-new">
-    <div class="section-title-new">
-      <span class="line"></span>
-      <h2>المنتجات الأكثر طلبًا</h2>
-      <span class="line"></span>
-    </div>
-    
-    <div class="products-grid-new" id="allProducts">
-      <!-- سيتم تعبئة المنتجات هنا عبر JavaScript -->
-    </div>
-  </section>
-</main>
-
-<!-- 6. شريط التنقل السفلي الجديد -->
-<nav class="bottom-nav-new">
-  <a href="cart.html"><span class="nav-icon">🛒<sup class="cart-count" data-cart-count>0</sup></span><span>السلة</span></a>
-  <a href="wishlist.html"><span class="nav-icon">🤍</span><span>المفضلة</span></a>
-  <a href="products.html" class="nav-center"><span class="nav-icon">🛍️</span><span>تسوق</span></a>
-  <a href="categories.html"><span class="nav-icon">▦</span><span>الأقسام</span></a>
-  <a href="index.html" class="active"><span class="nav-icon">🏠</span><span>الرئيسية</span></a>
-</nav>
-
-<!-- القائمة الجانبية -->
+<!-- القائمة الجانبية (مخفية ولكنها تعمل) -->
 <div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
 <div class="side-menu" id="sideMenu">
   <div class="side-menu-header">
@@ -143,7 +124,9 @@
     <a href="index.html" class="side-link active"><span class="link-text">الرئيسية</span><span class="link-icon">🏠</span><span class="link-arrow">❮</span></a>
     <a href="categories.html" class="side-link"><span class="link-text">الأقسام</span><span class="link-icon">▦</span><span class="link-arrow">❮</span></a>
     <a href="cart.html" class="side-link"><span class="link-text">السلة</span><span class="link-icon">🛒</span><span class="link-arrow">❮</span></a>
+    <a href="wishlist.html" class="side-link"><span class="link-text">المفضلة</span><span class="link-icon">🤍</span><span class="link-arrow">❮</span></a>
     <a href="account.html" class="side-link"><span class="link-text">حسابي</span><span class="link-icon">👤</span><span class="link-arrow">❮</span></a>
+    <a href="order-track.html" class="side-link"><span class="link-text">تتبع الطلب</span><span class="link-icon">📦</span><span class="link-arrow">❮</span></a>
   </div>
 </div>
 
