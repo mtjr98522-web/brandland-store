@@ -259,7 +259,7 @@ img { max-width: 100%; display: block; }
 .bottom-nav a.active { color: var(--gold); }
 .bottom-nav a span { font-size: 20px; }
 
-/* تصميم شبكة الأقسام */
+/* تصميم شبكة الأقسام القديمة (احتياطي) */
 .page { padding: 0 15px; }
 .categories-grid {
   display: grid;
@@ -853,7 +853,6 @@ img { max-width: 100%; display: block; }
 /* --- تصميم صفحة حسابي --- */
 .page { padding: 0 15px; position: relative; }
 
-/* خلفية صفحة حسابي */
 .account-bg-header {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 400px;
@@ -1012,12 +1011,11 @@ img { max-width: 100%; display: block; }
 .fav-btn { top: 10px; right: 10px; background: rgba(0, 0, 0, 0.5); border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
 
 /* --- خلفيات الصفحات المخصصة --- */
-body.categories-page { background-image: url('assets/bg-categories.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
 body.faq-page { background-image: url('assets/bg-faq.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
 body.wishlist-page { background-image: url('assets/bg-wishlist.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
 body.cart-page { background-image: url('assets/bg-cart.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
 
-body.categories-page::before, body.faq-page::before, body.wishlist-page::before, body.cart-page::before {
+body.faq-page::before, body.wishlist-page::before, body.cart-page::before {
   content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5, 5, 5, 0.85); z-index: -1;
 }
 
@@ -1060,3 +1058,53 @@ body.home-page {
 .hs-nav-cart { bottom: 1%; right: 80%; width: 18%; height: 5%; }
 
 .bottom-nav-new { display: none !important; }
+
+/* =========================================
+   تصميم صفحة الأقسام الجديد (صورة + أزرار شفافة)
+   ========================================= */
+body.categories-page {
+  background-color: #000 !important;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0 !important;
+  background-image: none !important; /* إزالة أي خلفية قديمة */
+}
+
+.image-wrapper-cat {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image-wrapper-cat img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* أزرار صفحة الأقسام */
+.hs-menu-cat { top: 1.5%; right: 4%; width: 10%; height: 3%; }
+.hs-cart-top-cat { top: 1.5%; right: 15%; width: 12%; height: 3%; }
+.hs-wish-top-cat { top: 1.5%; right: 28%; width: 10%; height: 3%; }
+.hs-search-top-cat { top: 1.5%; right: 40%; width: 10%; height: 3%; }
+.hs-logo-top-cat { top: 1%; right: 70%; width: 25%; height: 4%; }
+
+.hs-cat-01 { top: 26%; right: 52%; width: 44%; height: 8%; }
+.hs-cat-02 { top: 26%; right: 4%; width: 44%; height: 8%; }
+.hs-cat-03 { top: 35.5%; right: 52%; width: 44%; height: 8%; }
+.hs-cat-04 { top: 35.5%; right: 4%; width: 44%; height: 8%; }
+.hs-cat-05 { top: 45%; right: 52%; width: 44%; height: 8%; }
+.hs-cat-06 { top: 45%; right: 4%; width: 44%; height: 8%; }
+.hs-cat-07 { top: 54.5%; right: 52%; width: 44%; height: 8%; }
+.hs-cat-08 { top: 54.5%; right: 4%; width: 44%; height: 8%; }
+.hs-cat-09 { top: 64%; right: 25%; width: 50%; height: 8%; }
+
+.hs-promo-1 { top: 79%; right: 4%; width: 45%; height: 4%; }
+.hs-promo-2 { top: 79%; right: 52%; width: 45%; height: 4%; }
+
+.hs-nav-home-cat { bottom: 1%; right: 2%; width: 16%; height: 5%; }
+.hs-nav-cats-cat { bottom: 1%; right: 20%; width: 16%; height: 5%; }
+.hs-nav-shop-cat { bottom: 1%; right: 40%; width: 18%; height: 6%; }
+.hs-nav-wish-cat { bottom: 1%; right: 60%; width: 16%; height: 5%; }
+.hs-nav-cart-cat { bottom: 1%; right: 80%; width: 18%; height: 5%; }
