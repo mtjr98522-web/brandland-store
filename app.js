@@ -1,43 +1,43 @@
-// قاعدة بيانات المنتجات (تمت إضافة منتجات للأقسام الجديدة)
+// قاعدة بيانات المنتجات
 const PRODUCTS = [
   // ألعاب زوجية
-  { id: 1, name: "أطقم تقييد ناعمة", category: "couples", price: 19.99, rating: 4.8, image: "assets/product-3.jpg", visual: "red" },
-  { id: 2, name: "لعبة الأزواج", category: "couples", price: 24.99, rating: 4.7, image: "assets/product-4.jpg", visual: "black" },
-  { id: 5, name: "أصفاد جلدية ناعمة", category: "couples", price: 129, rating: 4.6, image: "assets/product-4.jpg", visual: "black" },
-  
+  { id: 1, name: "أطقم تقييد ناعمة", category: "couples", price: 149, rating: 4.8, image: "assets/product-3.jpg" },
+  { id: 2, name: "لعبة الأزواج", category: "couples", price: 129, rating: 4.7, image: "assets/product-4.jpg" },
+  { id: 5, name: "أصفاد جلدية ناعمة", category: "couples", price: 99, rating: 4.6, image: "assets/product-4.jpg" },
+
   // حلقات الانتصاب
-  { id: 3, name: "حلقة الاهتمام الزوجية", category: "rings", price: 149, rating: 4.9, image: "assets/product-2.jpg", visual: "black" },
-  { id: 6, name: "خاتم الاهتزاز الذكي", category: "rings", price: 99, rating: 4.5, image: "assets/product-5.jpg", visual: "black" },
+  { id: 3, name: "حلقة الاهتمام الزوجية", category: "rings", price: 149, rating: 4.9, image: "assets/product-2.jpg" },
+  { id: 6, name: "خاتم الاهتزاز الذكي", category: "rings", price: 99, rating: 4.5, image: "assets/product-5.jpg" },
 
   // هزازات نسائية
-  { id: 4, name: "هزاز سيليكون مزدوج", category: "vibrators", price: 199, rating: 4.6, image: "assets/product-5.jpg", visual: "pink" },
+  { id: 4, name: "هزاز سيليكون مزدوج", category: "vibrators", price: 199, rating: 4.6, image: "assets/product-5.jpg" },
 
   // أجهزة استمناء رجالي
-  { id: 9, name: "جهاز استمناء رجالي أوتوماتيكي", category: "male_masturbators", price: 249, rating: 4.7, image: "assets/product-2.jpg", visual: "black" },
+  { id: 9, name: "جهاز استمناء رجالي أوتوماتيكي", category: "male_masturbators", price: 249, rating: 4.7, image: "assets/product-2.jpg" },
 
   // الملابس الانجري
-  { id: 10, name: "طقم لانجيري دانتيل أحمر", category: "lingerie", price: 159, rating: 4.8, image: "assets/product-3.jpg", visual: "red" },
+  { id: 10, name: "طقم لانجيري دانتيل أحمر", category: "lingerie", price: 159, rating: 4.8, image: "assets/product-3.jpg" },
 
   // أقفاص عفة
-  { id: 11, name: "قفص عفة ستانلس ستيل", category: "chastity_cages", price: 199, rating: 4.6, image: "assets/product-4.jpg", visual: "black" },
+  { id: 11, name: "قفص عفة ستانلس ستيل", category: "chastity_cages", price: 199, rating: 4.6, image: "assets/product-4.jpg" },
 
   // سدادات شرجية
-  { id: 12, name: "سدادة شرجية سيليكون", category: "anal_plugs", price: 89, rating: 4.5, image: "assets/product-5.jpg", visual: "pink" },
+  { id: 12, name: "سدادة شرجية سيليكون", category: "anal_plugs", price: 89, rating: 4.5, image: "assets/product-5.jpg" },
 
   // قضبان صناعي
-  { id: 13, name: "قضيب صناعي واقعي", category: "dildos", price: 139, rating: 4.7, image: "assets/product-2.jpg", visual: "black" },
+  { id: 13, name: "قضيب صناعي واقعي", category: "dildos", price: 139, rating: 4.7, image: "assets/product-2.jpg" },
 
   // منشطات
-  { id: 14, name: "منشط جنسي للرجال", category: "male_enhancers", price: 99, rating: 4.4, image: "assets/product-6.jpg", visual: "oil" },
-  { id: 15, name: "منشط جنسي للنساء", category: "female_enhancers", price: 99, rating: 4.5, image: "assets/product-6.jpg", visual: "oil" },
+  { id: 14, name: "منشط جنسي للرجال", category: "male_enhancers", price: 99, rating: 4.4, image: "assets/product-6.jpg" },
+  { id: 15, name: "منشط جنسي للنساء", category: "female_enhancers", price: 99, rating: 4.5, image: "assets/product-6.jpg" },
 
   // عروض وهدايا
-  { id: 7, name: "زيت عناية فاخر", category: "care", price: 79, rating: 4.9, image: "assets/product-6.jpg", visual: "oil" },
-  { id: 8, name: "مجموعة هدايا راقية", category: "gifts", price: 299, rating: 4.8, image: "assets/product-7.jpg", visual: "gift" }
+  { id: 7, name: "زيت عناية فاخر", category: "care", price: 79, rating: 4.9, image: "assets/product-6.jpg" },
+  { id: 8, name: "مجموعة هدايا راقية", category: "gifts", price: 299, rating: 4.8, image: "assets/product-7.jpg" }
 ];
 
-// تم تعديل العملة إلى SAR
-const fmt = n => `${n} SAR`;
+// العملة بالريال السعودي
+const fmt = n => `${n} ريال سعودي`;
 
 // --- إدارة السلة ---
 function getCart() {
@@ -73,57 +73,55 @@ function toast(msg) {
   window.toastTimer = setTimeout(() => { t.style.opacity = "0"; }, 2000);
 }
 
-// --- تصميم بطاقة المنتج ---
+// --- تصميم بطاقة المنتج الجديدة (مطابقة للصورة) ---
 function productCard(p) {
+  let badgeHTML = '';
+  if (p.rating >= 4.8) badgeHTML = '<span class="pc-badge">👑 الأكثر مبيعًا</span>';
+  else if (p.category === 'gifts') badgeHTML = '<span class="pc-badge">🎁 هدية مثالية</span>';
+
+  // التحقق مما إذا كان المنتج في المفضلة لتلوين القلب
+  let wishlist = getWishlist();
+  let isFav = wishlist.includes(p.id);
+  let favClass = isFav ? 'active' : '';
+  let favIcon = isFav ? '♥' : '♡';
+
   return `
-  <article class="product-card">
-    <button class="fav-btn" data-id="${p.id}" onclick="toggleFav(this)">♡</button>
-    <img src="${p.image}" alt="${p.name}" class="product-image">
-    <h3 class="product-title">${p.name}</h3>
-    <div class="product-rating">
-      ★★★★★ <span>(${p.rating})</span>
-    </div>
-    <div class="product-price">${fmt(p.price)}</div>
-    <div class="product-actions">
-      <button class="add-to-cart-btn" onclick="addToCart(${p.id})">🛒 أضف إلى السلة</button>
-      <button class="buy-now-btn" onclick="addToCart(${p.id}); location.href='checkout.html';">⚡ اطلب الآن</button>
+  <article class="product-card-new">
+    <button class="fav-btn ${favClass}" data-id="${p.id}" onclick="toggleFav(this)" style="position:absolute; top:10px; left:10px; z-index:2; background:rgba(0,0,0,0.5); border:none; border-radius:50%; width:30px; height:30px; color:${isFav ? '#ff4d4d' : '#fff'}; cursor:pointer;">${favIcon}</button>
+    ${badgeHTML}
+    <img src="${p.image}" alt="${p.name}" class="pc-image">
+    <div class="pc-info">
+      <h3 class="pc-title">${p.name}</h3>
+      <p class="pc-desc">تصميم فاخر • استخدام آمن</p>
+      <div class="pc-price">${fmt(p.price)}</div>
+      <button class="pc-btn" onclick="addToCart(${p.id})">🛒 أضف للسلة</button>
     </div>
   </article>`;
 }
 
-// --- عرض المنتجات (تم التعديل ليتوافق مع القوائم المنسدلة الجديدة) ---
+// --- عرض المنتجات ---
 function renderProducts() {
   const container = document.getElementById("allProducts");
   if (!container) return;
   
-  // جلب القسم من الرابط (إذا تم الضغط على قسم من صفحة الأقسام)
   const urlParams = new URLSearchParams(window.location.search);
   const categoryParam = urlParams.get('category');
 
-  // جلب قيمة البحث
   const searchVal = document.getElementById("searchInput")?.value.toLowerCase() || "";
-  
-  // جلب القسم من القائمة المنسدلة
   const categoryFilter = document.getElementById("categoryFilter")?.value || "all";
 
-  // الفلترة الأساسية (البحث + القسم)
   let filtered = PRODUCTS.filter(p => {
     const matchesSearch = p.name.toLowerCase().includes(searchVal);
     let matchesCategory = true;
     
-    // إذا تم اختيار قسم من صفحة الأقسام
     if (categoryParam) {
       matchesCategory = (p.category === categoryParam);
-    } 
-    // إذا تم اختيار قسم من القائمة المنسدلة
-    else if (categoryFilter !== "all") {
+    } else if (categoryFilter !== "all") {
       matchesCategory = (p.category === categoryFilter);
     }
-    
     return matchesSearch && matchesCategory;
   });
 
-  // الترتيب
   const sortVal = document.getElementById("sortProducts")?.value || "popular";
   
   if (sortVal === "low") {
@@ -133,14 +131,17 @@ function renderProducts() {
   } else if (sortVal === "new") {
     filtered.sort((a, b) => b.id - a.id);
   } else {
-    // الأكثر مبيعاً (نستخدم التقييم كبديل)
     filtered.sort((a, b) => b.rating - a.rating);
   }
 
-  // عرض النتائج
-  container.innerHTML = filtered.length 
-    ? filtered.map(productCard).join("") 
-    : '<div style="grid-column: 1/-1; text-align: center; padding: 20px; color: #888;">لا توجد منتجات مطابقة لبحثك.</div>';
+  // عرض أول 4 منتجات فقط في الصفحة الرئيسية (إذا كنا في الصفحة الرئيسية)
+  if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
+    container.innerHTML = filtered.slice(0, 4).map(productCard).join("");
+  } else {
+    container.innerHTML = filtered.length 
+      ? filtered.map(productCard).join("") 
+      : '<div style="grid-column: 1/-1; text-align: center; padding: 20px; color: #888;">لا توجد منتجات مطابقة لبحثك.</div>';
+  }
 }
 
 function filterProducts() { renderProducts(); }
@@ -288,11 +289,13 @@ function toggleFav(btn) {
     wishlist = wishlist.filter(id => id !== productId);
     btn.classList.remove('active');
     btn.innerHTML = '♡';
+    btn.style.color = '#fff';
     toast("تمت الإزالة من المفضلة");
   } else {
     wishlist.push(productId);
     btn.classList.add('active');
     btn.innerHTML = '♥';
+    btn.style.color = '#ff4d4d';
     toast("تمت الإضافة إلى المفضلة");
   }
   setWishlist(wishlist);
@@ -342,15 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   renderCart();
   renderWishlist();
-
-  let wishlist = getWishlist();
-  document.querySelectorAll('.fav-btn').forEach(btn => {
-    let id = parseInt(btn.getAttribute('data-id'));
-    if (wishlist.includes(id)) {
-      btn.classList.add('active');
-      btn.innerHTML = '♥';
-    }
-  });
 
   const urlParams = new URLSearchParams(window.location.search);
   const orderIdFromUrl = urlParams.get('order');
