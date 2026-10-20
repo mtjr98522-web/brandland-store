@@ -10,7 +10,7 @@
 <body>
 
 <header class="top">
-  <button class="menu-button" aria-label="القائمة" onclick="toggleMenu()">☰</button>
+  <button class="menu-button" aria-label="القائمة" onclick="toggleSideMenu()">☰</button>
   <a class="logo" href="index.html">
     <span class="crown">♛</span> 
     <div class="logo-text">BRANDLAND</div>
@@ -21,97 +21,129 @@
 </header>
 
 <main class="page">
-  <!-- عنوان الصفحة -->
   <div class="section-header" style="margin-top: 20px;">
     <h2 style="font-size: 28px;">الأقسام</h2>
     <p style="color: var(--text-muted); font-size: 14px; margin-top: 5px;">تصفح جميع أقسام منتجاتنا</p>
   </div>
 
-  <!-- شبكة الأقسام -->
   <div class="categories-grid">
     
-    <!-- قسم المستلزمات الرجالية -->
-    <a href="products.html?category=men" class="category-card">
+    <!-- 1. أجهزة استمناء رجالي -->
+    <a href="products.html?category=male_masturbators" class="category-card">
       <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=400&auto=format&fit=crop" alt="المستلزمات الرجالية" class="cat-img" style="border-radius:10px;">
+        <!-- ضع اسم صورتك هنا -->
+        <img src="assets/cat-male-masturbator.jpg" alt="أجهزة استمناء رجالي" class="cat-img">
       </div>
-      <div class="cat-title">المستلزمات الرجالية <span>❯</span></div>
+      <div class="cat-title">أجهزة استمناء رجالي <span>❯</span></div>
     </a>
 
-    <!-- قسم المستلزمات النسائية -->
-    <a href="products.html?category=women" class="category-card">
+    <!-- 2. أقفاص عفة -->
+    <a href="products.html?category=chastity_cages" class="category-card">
       <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=400&auto=format&fit=crop" alt="المستلزمات النسائية" class="cat-img" style="border-radius:10px;">
+        <img src="assets/cat-chastity.jpg" alt="أقفاص عفة" class="cat-img">
       </div>
-      <div class="cat-title">المستلزمات النسائية <span>❯</span></div>
+      <div class="cat-title">أقفاص عفة <span>❯</span></div>
     </a>
 
-    <!-- قسم الألعاب الزوجية -->
+    <!-- 3. ألعاب زوجية -->
     <a href="products.html?category=couples" class="category-card">
       <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=400&auto=format&fit=crop" alt="الألعاب الزوجية" class="cat-img" style="border-radius:10px;">
+        <img src="assets/cat-couples.jpg" alt="ألعاب زوجية" class="cat-img">
       </div>
-      <div class="cat-title">الألعاب الزوجية <span>❯</span></div>
+      <div class="cat-title">ألعاب زوجية <span>❯</span></div>
     </a>
 
-    <!-- قسم حلقات الانتصاب -->
+    <!-- 4. الملابس الانجري -->
+    <a href="products.html?category=lingerie" class="category-card">
+      <div class="cat-image-wrapper">
+        <img src="assets/cat-lingerie.jpg" alt="الملابس الانجري" class="cat-img">
+      </div>
+      <div class="cat-title">الملابس الانجري <span>❯</span></div>
+    </a>
+
+    <!-- 5. المنتجات الأكثر مبيعًا -->
+    <a href="products.html?sort=popular" class="category-card">
+      <div class="cat-image-wrapper">
+        <img src="assets/cat-best-sellers.jpg" alt="المنتجات الأكثر مبيعًا" class="cat-img">
+      </div>
+      <div class="cat-title">المنتجات الأكثر مبيعًا <span>❯</span></div>
+    </a>
+
+    <!-- 6. حلقات الانتصاب -->
     <a href="products.html?category=rings" class="category-card">
       <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1615486364559-57d0e6e8e33c?q=80&w=400&auto=format&fit=crop" alt="حلقات الانتصاب" class="cat-img" style="border-radius:10px;">
+        <img src="assets/cat-rings.jpg" alt="حلقات الانتصاب" class="cat-img">
       </div>
       <div class="cat-title">حلقات الانتصاب <span>❯</span></div>
     </a>
 
-    <!-- قسم أجهزة استمناء للرجال -->
-    <a href="products.html?category=masturbators" class="category-card">
+    <!-- 7. سدادات شرجية -->
+    <a href="products.html?category=anal_plugs" class="category-card">
       <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop" alt="أجهزة استمناء للرجال" class="cat-img" style="border-radius:10px;">
+        <img src="assets/cat-anal-plugs.jpg" alt="سدادات شرجية" class="cat-img">
       </div>
-      <div class="cat-title">أجهزة استمناء للرجال <span>❯</span></div>
+      <div class="cat-title">سدادات شرجية <span>❯</span></div>
     </a>
 
-    <!-- قسم القضبان الصناعية -->
+    <!-- 8. قضبان صناعي -->
     <a href="products.html?category=dildos" class="category-card">
       <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1615486364712-507b3e9b2b1e?q=80&w=400&auto=format&fit=crop" alt="القضبان الصناعية" class="cat-img" style="border-radius:10px;">
+        <img src="assets/cat-dildos.jpg" alt="قضبان صناعي" class="cat-img">
       </div>
-      <div class="cat-title">القضبان الصناعية <span>❯</span></div>
+      <div class="cat-title">قضبان صناعي <span>❯</span></div>
     </a>
 
-    <!-- قسم الأصفاد والإثارة -->
-    <a href="products.html?category=bondage" class="category-card">
+    <!-- 9. منشطات جنسية للرجال -->
+    <a href="products.html?category=male_enhancers" class="category-card">
       <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=400&auto=format&fit=crop" alt="الأصفاد والإثارة" class="cat-img" style="border-radius:10px;">
+        <img src="assets/cat-male-enhancers.jpg" alt="منشطات جنسية للرجال" class="cat-img">
       </div>
-      <div class="cat-title">الأصفاد والإثارة <span>❯</span></div>
+      <div class="cat-title">منشطات جنسية للرجال <span>❯</span></div>
     </a>
 
-    <!-- قسم المثيرات -->
+    <!-- 10. منشطات جنسية للنساء -->
+    <a href="products.html?category=female_enhancers" class="category-card">
+      <div class="cat-image-wrapper">
+        <img src="assets/cat-female-enhancers.jpg" alt="منشطات جنسية للنساء" class="cat-img">
+      </div>
+      <div class="cat-title">منشطات جنسية للنساء <span>❯</span></div>
+    </a>
+
+    <!-- 11. هزازات نسائية -->
     <a href="products.html?category=vibrators" class="category-card">
       <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=400&auto=format&fit=crop" alt="المثيرات" class="cat-img" style="border-radius:10px;">
+        <img src="assets/cat-vibrators.jpg" alt="هزازات نسائية" class="cat-img">
       </div>
-      <div class="cat-title">المثيرات <span>❯</span></div>
-    </a>
-
-    <!-- قسم ملابس مثيرة -->
-    <a href="products.html?category=lingerie" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=400&auto=format&fit=crop" alt="ملابس مثيرة" class="cat-img" style="border-radius:10px;">
-      </div>
-      <div class="cat-title">ملابس مثيرة <span>❯</span></div>
+      <div class="cat-title">هزازات نسائية <span>❯</span></div>
     </a>
 
   </div>
 </main>
 
-<!-- القائمة السفلية للجوال -->
 <nav class="bottom-nav">
   <a href="index.html"><span>🏠</span>الرئيسية</a>
   <a href="categories.html" class="active"><span>▦</span>الأقسام</a>
   <a href="cart.html"><span>🛒</span>السلة</a>
   <a href="account.html"><span>♙</span>حسابي</a>
 </nav>
+
+<div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
+<div class="side-menu" id="sideMenu">
+  <div class="side-menu-header">
+    <button class="close-btn" onclick="toggleSideMenu()">✕</button>
+    <div class="side-logo">
+      <span class="crown">♛</span>
+      <h2>BRANDLAND</h2>
+      <p>حيث تبدأ تجربتك المميزة</p>
+    </div>
+  </div>
+  <div class="side-menu-links">
+    <a href="index.html" class="side-link"><span class="link-text">الرئيسية</span><span class="link-icon">🏠</span><span class="link-arrow">❮</span></a>
+    <a href="categories.html" class="side-link active"><span class="link-text">الأقسام</span><span class="link-icon">▦</span><span class="link-arrow">❮</span></a>
+    <a href="cart.html" class="side-link"><span class="link-text">السلة</span><span class="link-icon">🛒</span><span class="link-arrow">❮</span></a>
+    <a href="account.html" class="side-link"><span class="link-text">حسابي</span><span class="link-icon">👤</span><span class="link-arrow">❮</span></a>
+  </div>
+</div>
 
 </body>
 </html>
