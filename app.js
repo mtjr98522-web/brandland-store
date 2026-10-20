@@ -91,48 +91,59 @@ function productCard(p) {
   </article>`;
 }
 
-// --- عرض المنتجات ---
+// --- عرض المنتجات (تم التعديل ليتوافق مع القوائم المنسدلة الجديدة) ---
 function renderProducts() {
   const container = document.getElementById("allProducts");
   if (!container) return;
   
+  // جلب القسم من الرابط (إذا تم الضغط على قسم من صفحة الأقسام)
   const urlParams = new URLSearchParams(window.location.search);
   const categoryParam = urlParams.get('category');
 
+  // جلب قيمة البحث
   const searchVal = document.getElementById("searchInput")?.value.toLowerCase() || "";
   
+  // جلب القسم من القائمة المنسدلة
+  const categoryFilter = document.getElementById("categoryFilter")?.value || "all";
+
+  // الفلترة الأساسية (البحث + القسم)
   let filtered = PRODUCTS.filter(p => {
     const matchesSearch = p.name.toLowerCase().includes(searchVal);
     let matchesCategory = true;
+    
+    // إذا تم اختيار قسم من صفحة الأقسام
     if (categoryParam) {
       matchesCategory = (p.category === categoryParam);
+    } 
+    // إذا تم اختيار قسم من القائمة المنسدلة
+    else if (categoryFilter !== "all") {
+      matchesCategory = (p.category === categoryFilter);
     }
+    
     return matchesSearch && matchesCategory;
   });
 
-  const activeTab = document.querySelector('.filter-tabs button.active');
-  if (activeTab) {
-    const type = activeTab.textContent;
-    if (type === "الأكثر مبيعاً") {
-      filtered.sort((a, b) => b.rating - a.rating); 
-    } else if (type === "الأحدث") {
-      filtered.sort((a, b) => b.id - a.id); 
-    } else if (type === "الأعلى تقييماً") {
-      filtered.sort((a, b) => b.rating - a.rating);
-    }
+  // الترتيب
+  const sortVal = document.getElementById("sortProducts")?.value || "popular";
+  
+  if (sortVal === "low") {
+    filtered.sort((a, b) => a.price - b.price);
+  } else if (sortVal === "high") {
+    filtered.sort((a, b) => b.price - a.price);
+  } else if (sortVal === "new") {
+    filtered.sort((a, b) => b.id - a.id);
+  } else {
+    // الأكثر مبيعاً (نستخدم التقييم كبديل)
+    filtered.sort((a, b) => b.rating - a.rating);
   }
 
+  // عرض النتائج
   container.innerHTML = filtered.length 
     ? filtered.map(productCard).join("") 
-    : '<div style="grid-column: 1/-1; text-align: center; padding: 20px; color: #888;">لا توجد منتجات في هذا القسم حالياً.</div>';
+    : '<div style="grid-column: 1/-1; text-align: center; padding: 20px; color: #888;">لا توجد منتجات مطابقة لبحثك.</div>';
 }
 
 function filterProducts() { renderProducts(); }
-function filterByTab(tab, btn) {
-  document.querySelectorAll('.filter-tabs button').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderProducts();
-}
 
 // --- دالة عرض السلة ---
 function renderCart() {
