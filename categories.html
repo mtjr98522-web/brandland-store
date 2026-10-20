@@ -9,137 +9,261 @@
 </head>
 <body class="categories-page">
 
-<header class="top">
-  <button class="menu-button" aria-label="القائمة" onclick="toggleSideMenu()">☰</button>
-  <a class="logo" href="index.html">
-    <img src="assets/logo.png" alt="Brandland Logo">
-  </a>
-  <div class="icons">
-    <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
+<!-- 1. الشريط العلوي -->
+<header class="top-header-custom">
+  <div class="header-right">
+    <a href="index.html" class="header-logo">
+      <img src="assets/logo.png" alt="Brandland">
+    </a>
+  </div>
+  
+  <div class="header-left">
+    <button class="h-icon" onclick="toggleSideMenu()">☰</button>
+    <a href="cart.html" class="h-icon">🛒<span class="h-badge" data-cart-count>0</span></a>
+    <a href="wishlist.html" class="h-icon">🤍</a>
+    <a href="products.html" class="h-icon">🔍</a>
   </div>
 </header>
 
-<main class="page">
-  <div class="section-header" style="margin-top: 20px;">
-    <h2 style="font-size: 28px;">الأقسام</h2>
-    <p style="color: var(--text-muted); font-size: 14px; margin-top: 5px;">تصفح جميع أقسام منتجاتنا</p>
-  </div>
-
-  <div class="categories-grid">
+<main class="page-content">
+  
+  <!-- 2. القسم التعريفي -->
+  <section class="intro-card">
+    <div class="intro-text">
+      <span class="intro-badge">استكشف عالم المتعة</span>
+      <h1>تسوّق من أقسام <br><span>BRANDLAND</span></h1>
+      <p>اختر القسم المناسب لك واكتشف منتجاتنا بعناية، مع تغليف سري وخصوصية تامة عند الاستلام.</p>
+      <p class="small-text">اكتشف منتجاتنا مقسمة حسب الفئات لسهولة التصفح</p>
+    </div>
     
-    <!-- 1. أجهزة استمناء رجالي -->
-    <a href="category-male_masturbators.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-male-masturbator.jpg" alt="أجهزة استمناء رجالي" class="cat-img">
+    <div class="intro-stats">
+      <div class="stat">
+        <span class="stat-icon">📦</span>
+        <span class="stat-num">131</span>
+        <span class="stat-label">عدد المنتجات</span>
       </div>
-      <div class="cat-title">أجهزة استمناء رجالي <span>❯</span></div>
-    </a>
-
-    <!-- 2. أقفاص عفة -->
-    <a href="category-chastity_cages.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-chastity.jpg" alt="أقفاص عفة" class="cat-img">
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-icon">▦</span>
+        <span class="stat-num">9</span>
+        <span class="stat-label">عدد الأقسام</span>
       </div>
-      <div class="cat-title">أقفاص عفة <span>❯</span></div>
-    </a>
-
-    <!-- 3. ألعاب زوجية -->
-    <a href="category-couples.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-couples.jpg" alt="ألعاب زوجية" class="cat-img">
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-icon">📦</span>
+        <span class="stat-num">100%</span>
+        <span class="stat-label">تغليف سري</span>
       </div>
-      <div class="cat-title">ألعاب زوجية <span>❯</span></div>
-    </a>
+    </div>
+  </section>
 
-    <!-- 4. الملابس الانجري -->
-    <a href="category-lingerie.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-lingerie.jpg" alt="الملابس الانجري" class="cat-img">
-      </div>
-      <div class="cat-title">الملابس الانجري <span>❯</span></div>
-    </a>
-
-    <!-- 5. المنتجات الأكثر مبيعًا -->
-    <a href="category-best-sellers.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-best-sellers.jpg" alt="المنتجات الأكثر مبيعًا" class="cat-img">
-      </div>
-      <div class="cat-title">المنتجات الأكثر مبيعًا <span>❯</span></div>
-    </a>
-
-    <!-- 6. حلقات الانتصاب -->
-    <a href="category-rings.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-rings.jpg" alt="حلقات الانتصاب" class="cat-img">
-      </div>
-      <div class="cat-title">حلقات الانتصاب <span>❯</span></div>
-    </a>
-
-    <!-- 7. سدادات شرجية -->
-    <a href="category-anal_plugs.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-anal-plugs.jpg" alt="سدادات شرجية" class="cat-img">
-      </div>
-      <div class="cat-title">سدادات شرجية <span>❯</span></div>
-    </a>
-
-    <!-- 8. قضبان صناعي -->
-    <a href="category-dildos.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-dildos.jpg" alt="قضبان صناعي" class="cat-img">
-      </div>
-      <div class="cat-title">قضبان صناعي <span>❯</span></div>
-    </a>
-
-    <!-- 9. منشطات جنسية للرجال -->
-    <a href="category-male_enhancers.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-male-enhancers.jpg" alt="منشطات جنسية للرجال" class="cat-img">
-      </div>
-      <div class="cat-title">منشطات جنسية للرجال <span>❯</span></div>
-    </a>
-
-    <!-- 10. منشطات جنسية للنساء -->
-    <a href="category-female_enhancers.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-female-enhancers.jpg" alt="منشطات جنسية للنساء" class="cat-img">
-      </div>
-      <div class="cat-title">منشطات جنسية للنساء <span>❯</span></div>
-    </a>
-
-    <!-- 11. هزازات نسائية -->
-    <a href="category-vibrators.html" class="category-card">
-      <div class="cat-image-wrapper">
-        <img src="assets/cat-vibrators.jpg" alt="هزازات نسائية" class="cat-img">
-      </div>
-      <div class="cat-title">هزازات نسائية <span>❯</span></div>
-    </a>
-
+  <!-- 3. عنوان شبكة الأقسام -->
+  <div class="section-title-custom">
+    <h2>كل الأقسام <span>◆</span></h2>
+    <span class="count-label">9 أقسام</span>
   </div>
+
+  <!-- 4. شبكة الأقسام (9 أقسام) -->
+  <section class="categories-grid-custom">
+    
+    <!-- 01. الألعاب الزوجية -->
+    <a href="category-couples.html" class="cat-card">
+      <span class="cat-num">01</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=300&auto=format&fit=crop" alt="الألعاب الزوجية">
+      </div>
+      <div class="cat-info">
+        <h3>الألعاب الزوجية</h3>
+        <span>8 منتجات</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+    <!-- 02. الهزازات النسائية -->
+    <a href="category-vibrators.html" class="cat-card">
+      <span class="cat-num">02</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=300&auto=format&fit=crop" alt="الهزازات النسائية">
+      </div>
+      <div class="cat-info">
+        <h3>الهزازات النسائية</h3>
+        <span>21 منتج</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+    <!-- 03. أدوات الاستمناء -->
+    <a href="category-male_masturbators.html" class="cat-card">
+      <span class="cat-num">03</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=300&auto=format&fit=crop" alt="أدوات الاستمناء">
+      </div>
+      <div class="cat-info">
+        <h3>أدوات الاستمناء</h3>
+        <span>34 منتج</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+    <!-- 04. أقفاص وعقّم -->
+    <a href="category-chastity_cages.html" class="cat-card">
+      <span class="cat-num">04</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1615486364559-57d0e6e8e33c?q=80&w=300&auto=format&fit=crop" alt="أقفاص وعقّم">
+      </div>
+      <div class="cat-info">
+        <h3>أقفاص وعقّم</h3>
+        <span>3 منتجات</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+    <!-- 05. المضخات والأدوات -->
+    <a href="products.html?category=men" class="cat-card">
+      <span class="cat-num">05</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=300&auto=format&fit=crop" alt="المضخات والأدوات">
+      </div>
+      <div class="cat-info">
+        <h3>المضخات والأدوات</h3>
+        <span>26 منتج</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+    <!-- 06. منتجات الرجال -->
+    <a href="category-male_enhancers.html" class="cat-card">
+      <span class="cat-num">06</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=300&auto=format&fit=crop" alt="منتجات الرجال">
+      </div>
+      <div class="cat-info">
+        <h3>منتجات الرجال</h3>
+        <span>12 منتج</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+    <!-- 07. الملابس الحسية -->
+    <a href="category-lingerie.html" class="cat-card">
+      <span class="cat-num">07</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=300&auto=format&fit=crop" alt="الملابس الحسية">
+      </div>
+      <div class="cat-info">
+        <h3>الملابس الحسية</h3>
+        <span>19 منتج</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+    <!-- 08. سدادات وتأخير -->
+    <a href="category-anal_plugs.html" class="cat-card">
+      <span class="cat-num">08</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1615486364712-507b3e9b2b1e?q=80&w=300&auto=format&fit=crop" alt="سدادات وتأخير">
+      </div>
+      <div class="cat-info">
+        <h3>سدادات وتأخير</h3>
+        <span>26 منتج</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+    <!-- 09. طقّات الإنعاش -->
+    <a href="products.html?category=care" class="cat-card">
+      <span class="cat-num">09</span>
+      <div class="cat-img-circle">
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=300&auto=format&fit=crop" alt="طقّات الإنعاش">
+      </div>
+      <div class="cat-info">
+        <h3>طقّات الإنعاش</h3>
+        <span>4 منتجات</span>
+      </div>
+      <div class="cat-btn">❮</div>
+    </a>
+
+  </section>
+
+  <!-- 5. القسم الترويجي -->
+  <section class="promo-card">
+    <span class="promo-badge">لم تجد ما تبحث عنه؟</span>
+    <h2>تصفّح جميع المنتجات في مكان واحد</h2>
+    <p>اكتشف مجموعتنا الكاملة واختر المنتجات المناسبة لك بسهولة.</p>
+    <div class="promo-buttons">
+      <a href="products.html" class="btn-gold">تصفّح كل المنتجات</a>
+      <a href="https://wa.me/966500000000" class="btn-outline">💬 تواصل معنا</a>
+    </div>
+  </section>
+
 </main>
 
-<nav class="bottom-nav">
-  <a href="index.html"><span>🏠</span>الرئيسية</a>
-  <a href="categories.html" class="active"><span>▦</span>الأقسام</a>
-  <a href="cart.html"><span>🛒</span>السلة</a>
-  <a href="wishlist.html"><span>🤍</span>المفضلة</a>
-  <a href="account.html"><span>👤</span>حسابي</a>
+<!-- 6. التذييل -->
+<footer class="main-footer">
+  <div class="footer-top">
+    <a href="index.html" class="footer-logo">
+      <img src="assets/logo.png" alt="Brandland">
+    </a>
+    <p>وجهتك الأولى لكل ما تحتاجه من الألعاب الزوجية، منتجات أصلية بخصوصية تامة.</p>
+  </div>
+  
+  <div class="footer-links-grid">
+    <div class="footer-col">
+      <h4>روابط سريعة</h4>
+      <a href="products.html">المنتجات</a>
+      <a href="categories.html">الأقسام</a>
+      <a href="products.html?sort=new">العروض الخاصة</a>
+      <a href="#">من نحن</a>
+    </div>
+    
+    <div class="footer-col">
+      <h4>خدمة العملاء</h4>
+      <a href="menu.html#faq">الأسئلة الشائعة</a>
+      <a href="#">الشروط والأحكام</a>
+      <a href="menu.html#privacy">سياسة الخصوصية</a>
+      <a href="menu.html#contact">اتصل بنا</a>
+    </div>
+    
+    <div class="footer-col news-col">
+      <h4>النشرة البريدية</h4>
+      <p>اشترك ليصلك كل جديد.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('تم الاشتراك بنجاح!');">
+        <input type="email" placeholder="بريدك الإلكتروني" required>
+        <button type="submit">➤</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2024 BRANDLAND. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<!-- 7. شريط التنقل السفلي -->
+<nav class="bottom-nav-new">
+  <a href="cart.html"><span class="nav-icon">🛒<sup class="cart-count" data-cart-count>0</sup></span><span>السلة</span></a>
+  <a href="wishlist.html"><span class="nav-icon">🤍</span><span>المفضلة</span></a>
+  <a href="products.html" class="nav-center"><span class="nav-icon">🛍️</span><span>تسوق</span></a>
+  <a href="categories.html" class="active"><span class="nav-icon">▦</span><span>الأقسام</span></a>
+  <a href="index.html"><span class="nav-icon">🏠</span><span>الرئيسية</span></a>
 </nav>
 
+<!-- القائمة الجانبية -->
 <div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
 <div class="side-menu" id="sideMenu">
   <div class="side-menu-header">
     <button class="close-btn" onclick="toggleSideMenu()">✕</button>
     <div class="side-logo">
       <img src="assets/logo.png" alt="Brandland Logo" style="height: 60px; margin-bottom: 10px;">
-      <p>حيث تبدأ تجربتك المميزة</p>
     </div>
   </div>
   <div class="side-menu-links">
     <a href="index.html" class="side-link"><span class="link-text">الرئيسية</span><span class="link-icon">🏠</span><span class="link-arrow">❮</span></a>
     <a href="categories.html" class="side-link active"><span class="link-text">الأقسام</span><span class="link-icon">▦</span><span class="link-arrow">❮</span></a>
     <a href="cart.html" class="side-link"><span class="link-text">السلة</span><span class="link-icon">🛒</span><span class="link-arrow">❮</span></a>
+    <a href="wishlist.html" class="side-link"><span class="link-text">المفضلة</span><span class="link-icon">🤍</span><span class="link-arrow">❮</span></a>
     <a href="account.html" class="side-link"><span class="link-text">حسابي</span><span class="link-icon">👤</span><span class="link-arrow">❮</span></a>
+    <a href="order-track.html" class="side-link"><span class="link-text">تتبع الطلب</span><span class="link-icon">📦</span><span class="link-arrow">❮</span></a>
   </div>
 </div>
 
