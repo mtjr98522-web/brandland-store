@@ -1273,3 +1273,57 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: center;
 }
+/* --- خلفيات الصفحات المخصصة --- */
+
+/* خلفية الصفحة الرئيسية */
+body.home-page {
+  background-image: url('assets/bg-home.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* خلفية صفحة الأقسام */
+body.categories-page {
+  background-image: url('assets/bg-categories.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* خلفية صفحة الأسئلة الشائعة */
+body.faq-page {
+  background-image: url('assets/bg-faq.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* خلفية صفحة المفضلة */
+body.wishlist-page {
+  background-image: url('assets/bg-wishlist.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* خلفية صفحة السلة */
+body.cart-page {
+  background-image: url('assets/bg-cart.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* إضافة طبقة تعتيم فوق الخلفية لضمان قراءة النصوص */
+body.home-page::before,
+body.categories-page::before,
+body.faq-page::before,
+body.wishlist-page::before,
+body.cart-page::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(5, 5, 5, 0.85); /* تعتيم داكن */
+  z-index: -1;
+}
