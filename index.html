@@ -7,15 +7,14 @@
 <link rel="stylesheet" href="style.css">
 <script defer src="app.js"></script>
 </head>
-<body>
+<body class="home-page">
 
 <!-- 1. الهيدر الرئيسي -->
 <header class="top">
   <button class="menu-button" aria-label="القائمة" onclick="toggleSideMenu()">☰</button> 
   
   <a class="logo" href="index.html">
-    <span class="crown">♛</span> 
-    <div class="logo-text">BRANDLAND</div>
+    <img src="assets/logo.png" alt="Brandland Logo">
   </a>
   
   <div class="icons">
@@ -25,33 +24,9 @@
 
 <!-- 2. محتوى الصفحة الرئيسية -->
 <main>
-  <!-- البانر الرئيسي -->
+  <!-- البانر الرئيسي الجديد -->
   <section class="hero-banner">
-    <img src="assets/banner-main.jpg" class="hero-image" alt="Brandland Banner">
-  </section>
-
-  <!-- مميزات المتجر -->
-  <section class="features-bar">
-    <div class="feature-item">
-      <div class="feature-icon">🛡️</div>
-      <b>دفع آمن</b>
-      <small style="color:var(--text-muted)">خصوصية تامة</small>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">🚚</div>
-      <b>شحن سريع</b>
-      <small style="color:var(--text-muted)">لجميع المناطق</small>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">🏅</div>
-      <b>منتجات أصلية</b>
-      <small style="color:var(--text-muted)">جودة مضمونة</small>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">🎧</div>
-      <b>خدمة عملاء</b>
-      <small style="color:var(--text-muted)">على مدار الساعة</small>
-    </div>
+    <img src="assets/banner-new.jpg" class="hero-image" alt="Brandland Banner">
   </section>
 
   <!-- قسم المنتجات -->
@@ -80,8 +55,7 @@
   <div class="side-menu-header">
     <button class="close-btn" onclick="toggleSideMenu()">✕</button>
     <div class="side-logo">
-      <span class="crown">♛</span>
-      <h2>BRANDLAND</h2>
+      <img src="assets/logo.png" alt="Brandland Logo" style="height: 60px; margin-bottom: 10px;">
       <p>حيث تبدأ تجربتك المميزة</p>
     </div>
   </div>
