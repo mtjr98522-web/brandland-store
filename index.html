@@ -9,105 +9,141 @@
 </head>
 <body class="home-page">
 
-<!-- 1. الهيدر الرئيسي -->
-<header class="top">
-  <button class="menu-button" aria-label="القائمة" onclick="toggleSideMenu()">☰</button> 
+<!-- 1. الشريط العلوي الجديد -->
+<header class="top-header-new">
+  <button class="menu-btn" onclick="toggleSideMenu()">☰</button>
+  <div class="header-icons">
+    <a href="cart.html" class="icon-link">
+      🛒<span class="badge" data-cart-count>0</span>
+    </a>
+    <a href="wishlist.html" class="icon-link">🤍</a>
+  </div>
   
-  <a class="logo" href="index.html">
-    <img src="assets/logo.png" alt="Brandland Logo">
+  <a class="header-logo" href="index.html">
+    <img src="assets/logo.png" alt="Brandland">
   </a>
   
-  <div class="icons">
-    <a href="cart.html" class="cart-icon" title="السلة">🛒<sup class="cart-count" data-cart-count>0</sup></a>
+  <div class="header-search">
+    <a href="products.html" class="icon-link">🔍</a>
   </div>
 </header>
 
-<!-- 2. محتوى الصفحة الرئيسية -->
 <main>
-  <!-- البانر الرئيسي الجديد -->
-  <section class="hero-banner">
-    <img src="assets/banner-new.jpg" class="hero-image" alt="Brandland Banner">
+  <!-- 2. البانر الرئيسي الجديد -->
+  <section class="hero-section">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop');"></div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content-new">
+      <div class="hero-text">
+        <h1>BRANDLAND</h1>
+        <h2>ألعاب زوجية في السعودية</h2>
+        <p>خصوصية تامة • تغليف سري • الدفع عند الاستلام</p>
+        <div class="hero-buttons">
+          <a href="products.html" class="btn-gold">🛒 تسوق الآن</a>
+          <a href="https://wa.me/966500000000" class="btn-outline">💬 اسأل لولو</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- مؤشرات البانر -->
+    <div class="hero-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </section>
 
-  <!-- قسم المنتجات -->
-  <section class="products-section">
-    <div class="section-header">
-      <h2>أكثر المنتجات مبيعاً</h2>
+  <!-- 3. قسم المميزات الجديد -->
+  <section class="features-section-new">
+    <div class="feature-box">
+      <span class="feat-icon">💵</span>
+      <span>الدفع عند الاستلام</span>
     </div>
+    <div class="feature-box">
+      <span class="feat-icon">🚚</span>
+      <span>توصيل لكل المملكة</span>
+    </div>
+    <div class="feature-box">
+      <span class="feat-icon">🛡️</span>
+      <span>خصوصية تامة</span>
+    </div>
+  </section>
 
-    <div class="products-grid" id="allProducts">
+  <!-- 4. قسم تسوق حسب القسم -->
+  <section class="categories-section-new">
+    <div class="section-title-new">
+      <span class="line"></span>
+      <h2>تسوق حسب القسم</h2>
+      <span class="line"></span>
+    </div>
+    
+    <div class="categories-grid-new">
+      <a href="category-male_masturbators.html" class="cat-item">
+        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=200&auto=format&fit=crop" alt="رجالي"></div>
+        <span>مستلزمات رجالية</span>
+      </a>
+      <a href="category-female_enhancers.html" class="cat-item">
+        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=200&auto=format&fit=crop" alt="نسائي"></div>
+        <span>مستلزمات نسائية</span>
+      </a>
+      <a href="category-couples.html" class="cat-item">
+        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=200&auto=format&fit=crop" alt="زوجي"></div>
+        <span>ألعاب زوجية</span>
+      </a>
+      <a href="category-best-sellers.html" class="cat-item">
+        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1615486364559-57d0e6e8e33c?q=80&w=200&auto=format&fit=crop" alt="مبيع"></div>
+        <span>الأكثر مبيعًا</span>
+      </a>
+      <a href="category-gifts.html" class="cat-item">
+        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=200&auto=format&fit=crop" alt="هدايا"></div>
+        <span>أطقم هدايا</span>
+      </a>
+      <a href="category-care.html" class="cat-item">
+        <div class="cat-circle"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=200&auto=format&fit=crop" alt="زيوت"></div>
+        <span>زيوت ومساج</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5. قسم المنتجات الأكثر طلباً -->
+  <section class="products-section-new">
+    <div class="section-title-new">
+      <span class="line"></span>
+      <h2>المنتجات الأكثر طلبًا</h2>
+      <span class="line"></span>
+    </div>
+    
+    <div class="products-grid-new" id="allProducts">
       <!-- سيتم تعبئة المنتجات هنا عبر JavaScript -->
     </div>
   </section>
 </main>
 
-<!-- 3. القائمة السفلية للجوال -->
-<nav class="bottom-nav">
-  <a href="index.html" class="active"><span>🏠</span>الرئيسية</a>
-  <a href="categories.html"><span>▦</span>الأقسام</a>
-  <a href="cart.html"><span>🛒</span>السلة</a>
-  <a href="account.html"><span>♙</span>حسابي</a>
+<!-- 6. شريط التنقل السفلي الجديد -->
+<nav class="bottom-nav-new">
+  <a href="cart.html"><span class="nav-icon">🛒<sup class="cart-count" data-cart-count>0</sup></span><span>السلة</span></a>
+  <a href="wishlist.html"><span class="nav-icon">🤍</span><span>المفضلة</span></a>
+  <a href="products.html" class="nav-center"><span class="nav-icon">🛍️</span><span>تسوق</span></a>
+  <a href="categories.html"><span class="nav-icon">▦</span><span>الأقسام</span></a>
+  <a href="index.html" class="active"><span class="nav-icon">🏠</span><span>الرئيسية</span></a>
 </nav>
 
-<!-- 4. القائمة الجانبية (في النهاية تماماً) -->
+<!-- القائمة الجانبية -->
 <div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
 <div class="side-menu" id="sideMenu">
   <div class="side-menu-header">
     <button class="close-btn" onclick="toggleSideMenu()">✕</button>
     <div class="side-logo">
-      <img src="assets/logo.png" alt="Brandland Logo" style="height: 60px; margin-bottom: 10px;">
-      <p>حيث تبدأ تجربتك المميزة</p>
+      <img src="assets/logo.png" alt="Brandland Logo" style="height: 60px;">
     </div>
   </div>
-
   <div class="side-menu-links">
-    <a href="index.html" class="side-link">
-      <span class="link-text">الرئيسية</span>
-      <span class="link-icon">🏠</span>
-      <span class="link-arrow">❮</span>
-    </a>
-    <a href="categories.html" class="side-link">
-      <span class="link-text">الأقسام</span>
-      <span class="link-icon">▦</span>
-      <span class="link-arrow">❮</span>
-    </a>
-    <a href="cart.html" class="side-link">
-      <span class="link-text">السلة</span>
-      <span class="link-icon">🛒</span>
-      <span class="cart-badge" data-cart-count>0</span>
-      <span class="link-arrow">❮</span>
-    </a>
-    <a href="account.html" class="side-link">
-      <span class="link-text">حسابي</span>
-      <span class="link-icon">👤</span>
-      <span class="link-arrow">❮</span>
-    </a>
-    <a href="order-track.html" class="side-link">
-      <span class="link-text">تتبع الطلب</span>
-      <span class="link-icon">📦</span>
-      <span class="link-arrow">❮</span>
-    </a>
-    <a href="menu.html#faq" class="side-link">
-      <span class="link-text">الأسئلة الشائعة</span>
-      <span class="link-icon">❓</span>
-      <span class="link-arrow">❮</span>
-    </a>
-    <a href="menu.html#contact" class="side-link">
-      <span class="link-text">تواصل معنا</span>
-      <span class="link-icon">🎧</span>
-      <span class="link-arrow">❮</span>
-    </a>
-  </div>
-
-  <div class="side-menu-footer">
-    <a href="https://wa.me/966500000000" class="whatsapp-btn" target="_blank">
-      <div class="wa-icon">💬</div>
-      <div class="wa-text">
-        <span>تواصل معنا عبر واتساب</span>
-        <strong>+966 500 000 000</strong>
-        <small>خدمة عملاء سريعة</small>
-      </div>
-    </a>
+    <a href="index.html" class="side-link active"><span class="link-text">الرئيسية</span><span class="link-icon">🏠</span><span class="link-arrow">❮</span></a>
+    <a href="categories.html" class="side-link"><span class="link-text">الأقسام</span><span class="link-icon">▦</span><span class="link-arrow">❮</span></a>
+    <a href="cart.html" class="side-link"><span class="link-text">السلة</span><span class="link-icon">🛒</span><span class="link-arrow">❮</span></a>
+    <a href="account.html" class="side-link"><span class="link-text">حسابي</span><span class="link-icon">👤</span><span class="link-arrow">❮</span></a>
   </div>
 </div>
 
