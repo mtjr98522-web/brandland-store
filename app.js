@@ -1,11 +1,37 @@
-// قاعدة بيانات المنتجات
+// قاعدة بيانات المنتجات (تمت إضافة منتجات للأقسام الجديدة)
 const PRODUCTS = [
+  // ألعاب زوجية
   { id: 1, name: "أطقم تقييد ناعمة", category: "couples", price: 19.99, rating: 4.8, image: "assets/product-3.jpg", visual: "red" },
   { id: 2, name: "لعبة الأزواج", category: "couples", price: 24.99, rating: 4.7, image: "assets/product-4.jpg", visual: "black" },
-  { id: 3, name: "حلقة الاهتمام الزوجية", category: "men", price: 149, rating: 4.9, image: "assets/product-2.jpg", visual: "black" },
-  { id: 4, name: "هزاز سيليكون مزدوج", category: "women", price: 199, rating: 4.6, image: "assets/product-5.jpg", visual: "pink" },
   { id: 5, name: "أصفاد جلدية ناعمة", category: "couples", price: 129, rating: 4.6, image: "assets/product-4.jpg", visual: "black" },
-  { id: 6, name: "خاتم الاهتزاز الذكي", category: "men", price: 99, rating: 4.5, image: "assets/product-5.jpg", visual: "black" },
+  
+  // حلقات الانتصاب
+  { id: 3, name: "حلقة الاهتمام الزوجية", category: "rings", price: 149, rating: 4.9, image: "assets/product-2.jpg", visual: "black" },
+  { id: 6, name: "خاتم الاهتزاز الذكي", category: "rings", price: 99, rating: 4.5, image: "assets/product-5.jpg", visual: "black" },
+
+  // هزازات نسائية
+  { id: 4, name: "هزاز سيليكون مزدوج", category: "vibrators", price: 199, rating: 4.6, image: "assets/product-5.jpg", visual: "pink" },
+
+  // أجهزة استمناء رجالي
+  { id: 9, name: "جهاز استمناء رجالي أوتوماتيكي", category: "male_masturbators", price: 249, rating: 4.7, image: "assets/product-2.jpg", visual: "black" },
+
+  // الملابس الانجري
+  { id: 10, name: "طقم لانجيري دانتيل أحمر", category: "lingerie", price: 159, rating: 4.8, image: "assets/product-3.jpg", visual: "red" },
+
+  // أقفاص عفة
+  { id: 11, name: "قفص عفة ستانلس ستيل", category: "chastity_cages", price: 199, rating: 4.6, image: "assets/product-4.jpg", visual: "black" },
+
+  // سدادات شرجية
+  { id: 12, name: "سدادة شرجية سيليكون", category: "anal_plugs", price: 89, rating: 4.5, image: "assets/product-5.jpg", visual: "pink" },
+
+  // قضبان صناعي
+  { id: 13, name: "قضيب صناعي واقعي", category: "dildos", price: 139, rating: 4.7, image: "assets/product-2.jpg", visual: "black" },
+
+  // منشطات
+  { id: 14, name: "منشط جنسي للرجال", category: "male_enhancers", price: 99, rating: 4.4, image: "assets/product-6.jpg", visual: "oil" },
+  { id: 15, name: "منشط جنسي للنساء", category: "female_enhancers", price: 99, rating: 4.5, image: "assets/product-6.jpg", visual: "oil" },
+
+  // عروض وهدايا
   { id: 7, name: "زيت عناية فاخر", category: "care", price: 79, rating: 4.9, image: "assets/product-6.jpg", visual: "oil" },
   { id: 8, name: "مجموعة هدايا راقية", category: "gifts", price: 299, rating: 4.8, image: "assets/product-7.jpg", visual: "gift" }
 ];
@@ -174,7 +200,7 @@ function removeItem(id) {
   toast("تم حذف المنتج");
 }
 
-// --- دالة إرسال الطلب (تمت إضافة توليد رقم طلب) ---
+// --- دالة إرسال الطلب ---
 function submitOrder(event) {
   event.preventDefault();
   
@@ -195,7 +221,6 @@ function submitOrder(event) {
     payment: form.payment.value
   };
 
-  // توليد رقم طلب عشوائي (مثال: BL-78452)
   const orderId = "BL-" + Math.floor(10000 + Math.random() * 90000);
 
   const orderData = {
@@ -220,7 +245,7 @@ function getCartTotal() {
   return subtotal + (subtotal > 0 ? 26 : 0);
 }
 
-// --- دالة فتح وإغلاق القائمة الجانبية (تم حذف التكرار) ---
+// --- دالة فتح وإغلاق القائمة الجانبية ---
 function toggleSideMenu() {
   const menu = document.getElementById('sideMenu');
   const overlay = document.getElementById('sideMenuOverlay');
@@ -307,7 +332,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCart();
   renderWishlist();
 
-  // تحديث أزرار القلب في الصفحات
   let wishlist = getWishlist();
   document.querySelectorAll('.fav-btn').forEach(btn => {
     let id = parseInt(btn.getAttribute('data-id'));
@@ -317,7 +341,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // التحقق من رابط تتبع الطلب
   const urlParams = new URLSearchParams(window.location.search);
   const orderIdFromUrl = urlParams.get('order');
   
