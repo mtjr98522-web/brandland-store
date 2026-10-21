@@ -7,18 +7,19 @@
 <link rel="stylesheet" href="style.css">
 <script defer src="app.js"></script>
 <style>
-  /* إخفاء شريط التمرير وجعل الصفحة تملأ الشاشة */
+  /* إعدادات خاصة بالصفحة الرئيسية الجديدة */
   body.home-page {
-    background-color: #000;
+    background-color: #000 !important;
     margin: 0;
     padding: 0;
-    padding-bottom: 0 !important; /* إزالة المساحة السفلية */
+    padding-bottom: 0 !important;
+    background-image: none !important;
   }
   
   .image-wrapper {
     position: relative;
     width: 100%;
-    max-width: 600px; /* تحديد عرض أقصى للشاشات الكبيرة */
+    max-width: 600px;
     margin: 0 auto;
   }
   
@@ -28,54 +29,55 @@
     display: block;
   }
 
-  /* تصميم الأزرار الشفافة (Hotspots) */
+  /* الأزرار الشفافة */
   .hotspot {
     position: absolute;
     z-index: 10;
     cursor: pointer;
-    /* border: 1px solid red;  <-- إزالة التعليق لرؤية أماكن الأزرار أثناء التجربة */
+    /* border: 1px solid red; */ /* أزل التعليق لرؤية الأزرار */
   }
 
   /* الشريط العلوي */
-  .hs-menu { top: 2%; right: 4%; width: 10%; height: 5%; }
-  .hs-search { top: 2%; left: 4%; width: 10%; height: 5%; }
-  .hs-logo { top: 1%; left: 40%; width: 20%; height: 6%; }
-  .hs-cart-top { top: 2%; right: 18%; width: 12%; height: 5%; }
-  .hs-wish-top { top: 2%; right: 32%; width: 10%; height: 5%; }
+  .hs-menu { top: 1.5%; right: 3%; width: 8%; height: 3%; }
+  .hs-search { top: 1.5%; right: 13%; width: 8%; height: 3%; }
+  .hs-logo { top: 1%; left: 42%; width: 16%; height: 4%; }
+  .hs-wish-top { top: 1.5%; left: 16%; width: 8%; height: 3%; }
+  .hs-cart-top { top: 1.5%; left: 4%; width: 8%; height: 3%; }
 
   /* البانر */
-  .hs-hero-shop { top: 23%; left: 4%; width: 42%; height: 4%; }
-  .hs-hero-lulu { top: 23%; left: 52%; width: 42%; height: 4%; }
+  .hs-hero-shop { top: 17%; left: 35%; width: 30%; height: 4%; }
 
-  /* الأقسام (6 أقسام) */
-  .hs-cat-1 { top: 44%; right: 4%; width: 28%; height: 8%; }
-  .hs-cat-2 { top: 44%; right: 36%; width: 28%; height: 8%; }
-  .hs-cat-3 { top: 44%; right: 68%; width: 28%; height: 8%; }
-  
-  .hs-cat-4 { top: 57%; right: 4%; width: 28%; height: 8%; }
-  .hs-cat-5 { top: 57%; right: 36%; width: 28%; height: 8%; }
-  .hs-cat-6 { top: 57%; right: 68%; width: 28%; height: 8%; }
+  /* الأقسام (8 أقسام) */
+  /* الصف الأول */
+  .hs-cat-1 { top: 27.5%; right: 73%; width: 24%; height: 6%; }
+  .hs-cat-2 { top: 27.5%; right: 48%; width: 24%; height: 6%; }
+  .hs-cat-3 { top: 27.5%; right: 23%; width: 24%; height: 6%; }
+  .hs-cat-4 { top: 27.5%; right: -2%; width: 24%; height: 6%; }
+  /* الصف الثاني */
+  .hs-cat-5 { top: 37.5%; right: 73%; width: 24%; height: 6%; }
+  .hs-cat-6 { top: 37.5%; right: 48%; width: 24%; height: 6%; }
+  .hs-cat-7 { top: 37.5%; right: 23%; width: 24%; height: 6%; }
+  .hs-cat-8 { top: 37.5%; right: -2%; width: 24%; height: 6%; }
 
-  /* المنتجات */
-  .hs-prod-1 { top: 77%; right: 4%; width: 44%; height: 8%; }
-  .hs-prod-2 { top: 77%; right: 52%; width: 44%; height: 8%; }
+  /* المنتجات (4 منتجات) */
+  .hs-prod-1 { top: 56%; right: 73%; width: 24%; height: 6%; }
+  .hs-prod-2 { top: 56%; right: 48%; width: 24%; height: 6%; }
+  .hs-prod-3 { top: 56%; right: 23%; width: 24%; height: 6%; }
+  .hs-prod-4 { top: 56%; right: -2%; width: 24%; height: 6%; }
 
   /* شريط التنقل السفلي */
-  .hs-nav-home { bottom: 1%; right: 2%; width: 16%; height: 5%; }
-  .hs-nav-cats { bottom: 1%; right: 20%; width: 16%; height: 5%; }
-  .hs-nav-shop { bottom: 1%; right: 40%; width: 18%; height: 6%; }
-  .hs-nav-wish { bottom: 1%; right: 60%; width: 16%; height: 5%; }
-  .hs-nav-cart { bottom: 1%; right: 80%; width: 18%; height: 5%; }
-
-  /* إخفاء شريط التنقل القديم */
-  .bottom-nav-new { display: none !important; }
+  .hs-nav-home { bottom: 1%; right: 3%; width: 16%; height: 4%; }
+  .hs-nav-cats { bottom: 1%; right: 22%; width: 16%; height: 4%; }
+  .hs-nav-shop { bottom: 1%; right: 41%; width: 18%; height: 4%; }
+  .hs-nav-wish { bottom: 1%; right: 61%; width: 16%; height: 4%; }
+  .hs-nav-acc { bottom: 1%; right: 81%; width: 16%; height: 4%; }
 </style>
 </head>
 <body class="home-page">
 
 <div class="image-wrapper">
-  <!-- الصورة الأساسية التي تحتوي على التصميم كاملاً -->
-  <img src="assets/home-bg-new.jpg" alt="Brandland Store">
+  <!-- الصورة الجديدة -->
+  <img src="assets/home-bg-pink.jpg" alt="Brandland Home">
 
   <!-- الأزرار الشفافة (Hotspots) -->
   
@@ -83,35 +85,38 @@
   <a href="#" class="hotspot hs-menu" onclick="toggleSideMenu(); return false;"></a>
   <a href="products.html" class="hotspot hs-search"></a>
   <a href="index.html" class="hotspot hs-logo"></a>
-  <a href="cart.html" class="hotspot hs-cart-top"></a>
   <a href="wishlist.html" class="hotspot hs-wish-top"></a>
+  <a href="cart.html" class="hotspot hs-cart-top"></a>
 
   <!-- البانر -->
   <a href="products.html" class="hotspot hs-hero-shop"></a>
-  <a href="https://wa.me/966500000000" class="hotspot hs-hero-lulu"></a>
 
   <!-- الأقسام -->
-  <a href="category-male_masturbators.html" class="hotspot hs-cat-1"></a>
-  <a href="category-female_enhancers.html" class="hotspot hs-cat-2"></a>
-  <a href="category-couples.html" class="hotspot hs-cat-3"></a>
+  <a href="category-dildos.html" class="hotspot hs-cat-1"></a>
+  <a href="category-anal_plugs.html" class="hotspot hs-cat-2"></a>
+  <a href="category-rings.html" class="hotspot hs-cat-3"></a>
+  <a href="products.html?category=care" class="hotspot hs-cat-4"></a>
   
-  <a href="category-care.html" class="hotspot hs-cat-4"></a>
-  <a href="category-gifts.html" class="hotspot hs-cat-5"></a>
-  <a href="category-best-sellers.html" class="hotspot hs-cat-6"></a>
+  <a href="category-couples.html" class="hotspot hs-cat-5"></a>
+  <a href="category-lingerie.html" class="hotspot hs-cat-6"></a>
+  <a href="category-best-sellers.html" class="hotspot hs-cat-7"></a>
+  <a href="products.html?sort=new" class="hotspot hs-cat-8"></a>
 
-  <!-- المنتجات -->
+  <!-- المنتجات (الأكثر مبيعاً) -->
   <a href="product.html?id=4" class="hotspot hs-prod-1"></a>
-  <a href="product.html?id=8" class="hotspot hs-prod-2"></a>
+  <a href="product.html?id=12" class="hotspot hs-prod-2"></a>
+  <a href="product.html?id=3" class="hotspot hs-prod-3"></a>
+  <a href="product.html?id=7" class="hotspot hs-prod-4"></a>
 
   <!-- شريط التنقل السفلي -->
   <a href="index.html" class="hotspot hs-nav-home"></a>
   <a href="categories.html" class="hotspot hs-nav-cats"></a>
   <a href="products.html" class="hotspot hs-nav-shop"></a>
   <a href="wishlist.html" class="hotspot hs-nav-wish"></a>
-  <a href="cart.html" class="hotspot hs-nav-cart"></a>
+  <a href="account.html" class="hotspot hs-nav-acc"></a>
 </div>
 
-<!-- القائمة الجانبية (مخفية ولكنها تعمل) -->
+<!-- القائمة الجانبية (مخفية وتعمل عند الضغط على زر القائمة) -->
 <div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
 <div class="side-menu" id="sideMenu">
   <div class="side-menu-header">
